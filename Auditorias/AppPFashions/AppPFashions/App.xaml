@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--DIRECTORIO DE RECURSOS-->
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:infra="clr-namespace:AppPFashions.Infrastructure;assembly=AppPFashions"
+             x:Class="AppPFashions.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- General colors -->
+            <Color x:Key="MainColor">#F25C5C</Color>
+            <Color x:Key="FontColor">#000879</Color>
+            <Color x:Key="BackgroundColor">#FAFAFA</Color>
+            <Color x:Key="AccentColor1">#D50000</Color>
+            <Color x:Key="AccentColor2">#202020</Color>
+            <Color x:Key="MenuTextColor">#0D0D0D</Color>
+            <!-- Menu colors -->
+            <Color x:Key="MenuColor">#FAFAFA</Color>
+            <Color x:Key="MenuFontColor">#202020</Color>
+            <!-- Locator -->
+            <infra:InstanceLocator x:Key="Locator"></infra:InstanceLocator>
+
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sfTreeView="clr-namespace:Syncfusion.XForms.TreeView;assembly=Syncfusion.SfTreeView.XForms"  
+             xmlns:treeviewengine="clr-namespace:Syncfusion.TreeView.Engine;assembly=Syncfusion.SfTreeView.XForms"
+             xmlns:views="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:local="clr-namespace:AppPFashions.Models"             
+             xmlns:localp="clr-namespace:AppPFashions.Helper"
+             x:Class="AppPFashions.Pages.ResumenAuditoriasPage"
+             Title="{Binding Desauditoria}"
+             BackgroundColor="{StaticResource MenuColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem    
+            x:Name="tlb_deleteauditoria"
+            Clicked="Tlb_deleteauditoria_Clicked"
+            Icon="delaudi.png"            
+            Priority="0" Order="Primary"/>
+        <ToolbarItem
+            x:Name="tlb_sincroauditoria"
+            Clicked="tlb_sincroauditoria_Clicked"
+            Icon="upload.png"            
+            Priority="1" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <localp:LabelIsVisibleConverter x:Key="LabelIsVisibleConverter"/>
+            <localp:FontAttributeConverter x:Key="FontAttributeConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <RelativeLayout VerticalOptions="FillAndExpand">
+            <ContentView 
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"  
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+                <Grid Margin="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                    <sfTreeView:SfTreeView x:Name="treeView"
+                        ItemHeight="40"
+                        Indentation="20"
+                        ExpanderWidth="40"
+                        FullRowSelect="True"
+                        IsAnimationEnabled="True"   
+                        ExpandActionTarget="Node"
+                        AutoExpandMode="RootNodesExpanded"
+                        ItemTapped="TreeView_ItemTapped"
+                        ItemHolding="TreeView_ItemHolding">
+                        <sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                            <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:AuditFolder}" ChildPropertyName="SubFolder"/>
+                            <treeviewengine:HierarchyPropertyDescriptor TargetType="{x:Type local:SubFolder}" ChildPropertyName="DetFolder"/>
+                        </sfTreeView:SfTreeView.HierarchyPropertyDescriptors>
+                        <sfTreeView:SfTreeView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <ViewCell.View>
+                                        <Grid x:Name="grid" RowSpacing="0" BackgroundColor="Transparent">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*" />
+                                                <RowDefinition Height="1" />
+                                            </Grid.RowDefinitions>
+                                            <Grid RowSpacing="0" Grid.Row="0">
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="40" />
+                                                    <ColumnDefinition Width="*" />
+                                                    <ColumnDefinition Width="30" />
+                                                    <ColumnDefinition Width="5" />
+                                                </Grid.ColumnDefinitions>
+                                                <Grid Padding="5,5,5,5">
+                                                    <Image
+                                               Source="{Binding ImageName}"                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+                                               VerticalOptions="Center"
+                                               HorizontalOptions="Center"
+                                               HeightRequest="45" 
+                                               WidthRequest="45"/>
+                                                </Grid>
+                                                <Grid Grid.Column="1"
+                                              RowSpacing="1"
+                                              Padding="1,0,0,0"
+                                              VerticalOptions="Center">
+                                                    <Label LineBreakMode="NoWrap"
+                                                   Text="{Binding FolderName}"
+                                                   FontAttributes="{Binding FontBold,Converter={x:StaticResource FontAttributeConverter }}"
+                                                   TextColor="DimGray"
+                                                   VerticalTextAlignment="Center"                                               
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=16, Tablet=18},iOS={OnIdiom Phone=16,Tablet=18},UWP={OnIdiom Phone=18,Tablet=20,Desktop=20}}">
+                                                    </Label>
+                                                </Grid>
+                                                <Grid Grid.Column="2"
+                                              RowSpacing="1"
+                                              Padding=".1,.1,.1,.1"
+                                              VerticalOptions="Center">
+                                                    <Label LineBreakMode="NoWrap"
+                                                   Text="{Binding AuditCount}"
+                                                   FontAttributes="{Binding FontBold,Converter={x:StaticResource FontAttributeConverter }}"
+                                                   IsVisible="{Binding AuditCount,Converter={x:StaticResource LabelIsVisibleConverter}}"
+                                                   TextColor="DimGray"                                                   
+                                                   VerticalTextAlignment="Center"
+                                                   HorizontalTextAlignment="Center"
+                                                   FontSize="{OnPlatform Android={OnIdiom Phone=14, Tablet=16},iOS={OnIdiom Phone=14,Tablet=16},UWP={OnIdiom Phone=16,Tablet=18,Desktop=18}}">
+                                                    </Label>
+                                                </Grid>
+                                            </Grid>
+                                            <StackLayout Grid.Row="1" BackgroundColor="#E4E4E4" HeightRequest="1"/>
+                                        </Grid>
+                                    </ViewCell.View>
+                                </ViewCell>
+                            </DataTemplate>
+                        </sfTreeView:SfTreeView.ItemTemplate>
+                    </sfTreeView:SfTreeView>
+                </Grid>
+            </ContentView>
+            <views:FloatingActionButton  
+                x:Name="fab_nuevaauditoria"
+                Image="agregar.png" 
+                ButtonColor="#3D57AE"           
+                Clicked="fab_nuevaauditoria_Clicked"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-75}"  
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-125}" />
+
+                <!--<views:FloatingActionButton 
+                x:Name="fab_nuevaauditoria"
+                Image="agregar.png" 
+                ButtonColor="#3D57AE"             
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="CenterAndExpand"
+                WidthRequest="50" HeightRequest="50"         
+                Clicked="fab_nuevaauditoria_Clicked"/>-->
+        
+            </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

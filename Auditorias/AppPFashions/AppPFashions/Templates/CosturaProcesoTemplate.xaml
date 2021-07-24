@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPFashions.Templates.CosturaProcesoTemplate">
+
+<Frame Padding="10" HasShadow="true" BackgroundColor="White" CornerRadius="0">
+        <Grid RowSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="5" />
+            </Grid.RowDefinitions>
+
+            <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" HeightRequest="60" WidthRequest="60" VerticalOptions="CenterAndExpand" HorizontalOptions="EndAndExpand" Source="{Binding ImageURL}"></Image>
+            <Label Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" Text="{Binding Clinea}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"></Label>
+
+            <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="1" RowSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="1.5*" />
+                    <RowDefinition Height="0.2*" />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="50"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" Text="{Binding Nordpr}" TextColor="DimGray" VerticalOptions="FillAndExpand" FontSize="16" FontAttributes="Bold" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" />
+                <!--<rating:SfRating Grid.Row="0" Grid.Column="1" Value="{Binding Rating}" ReadOnly="true" ItemSize="12" VerticalOptions="Center" 
+									 HorizontalOptions="EndAndExpand" Precision="Exact" >
+                    <rating:SfRating.RatingSettings>
+                        <rating:SfRatingSettings RatedStrokeWidth="0" UnRatedStrokeWidth="0" UnRatedFill="Silver"  />
+                    </rating:SfRating.RatingSettings>
+                </rating:SfRating>-->
+                            
+                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" FontSize="13" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   		Text="{Binding Dclien}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+                
+                <Label Grid.Row="2" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="13" TextColor="DimGray" HorizontalOptions="StartAndExpand"
+			   			Text="{Binding Dopera}" VerticalOptions="FillAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"/>
+                
+                <Label Grid.Row="3" Grid.RowSpan="2" Grid.Column="0" Grid.ColumnSpan="3" FontSize="12" TextColor="Gray" HorizontalOptions="StartAndExpand"
+			   			Text="{Binding Dtraba}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+                
+                <StackLayout Orientation="Horizontal" Grid.Row="0" Grid.Column="2" Spacing="0" >
+                    <!--<Image HeightRequest="10" WidthRequest="10" VerticalOptions="Center" HorizontalOptions="Start" Source="ic_reauditoria.png"/>-->
+                    <Label FontSize="12" TextColor="DimGray" HorizontalOptions="EndAndExpand"
+			   			Text="{Binding Ndiast}" VerticalTextAlignment="Center" HorizontalTextAlignment="End" FontAttributes="Bold"/>
+                </StackLayout>
+            </Grid>
+
+            <!--<ProgressBar Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Navy"
+						 Progress="100" HeightRequest="5" ProgressColor="Navy"
+						 VerticalOptions="End" HorizontalOptions="FillAndExpand" />-->
+        </Grid>
+    </Frame>
+
+</ViewCell>

@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--PAGINA DE MENU-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPFashions.Pages.MenuUserPage"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:customControls="clr-namespace:AppPFashions.CustomControls;assembly=AppPFashions"
+             xmlns:imagecircle="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             Title="Menu"
+             BackgroundColor="{StaticResource MenuColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout>
+        <ListView             
+        ItemsSource="{Binding MenuUser}"
+        HasUnevenRows="True"
+        SeparatorVisibility="Default">
+            <ListView.Header>
+                <Grid HeightRequest="100" BackgroundColor="#F25C5C" Padding="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="8*"/>
+                        <RowDefinition Height="2*"/>
+                    </Grid.RowDefinitions>
+                    <border:SfBorder 
+                        BorderColor="White"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        CornerRadius="50"
+                        WidthRequest="80"
+                        HeightRequest="80">
+                    <Image
+                        x:Name="userimg"
+                        Grid.Row="0"                        
+                        Aspect="AspectFill"
+                        BackgroundColor="#00a0e1">
+                    </Image>
+                    </border:SfBorder>
+                    <Label 
+                        x:Name="lbluser"                        
+                        Grid.Row="1"
+                        TextColor="White"
+                        FontSize="12"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center">
+                    </Label>
+                    <!--<Grid Padding="0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <StackLayout>
+                            <Label Text=""></Label>
+                        </StackLayout>
+                    </Grid>-->
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <customControls:ExtendedViewCell SelectedBackgroundColor="#E4E4E5">
+                        <ViewCell.View>
+
+                            <Grid>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding NavigateCommandUser}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding Icon}"
+                                       Grid.Column="0"
+                                       WidthRequest="40"
+                                       HeightRequest="40">
+                                    </Image>
+                                </Grid>
+
+                                <Label Grid.Column="1"
+                                   VerticalOptions="Center"                                   
+                                   Text="{Binding Title}"
+                                   TextColor="{StaticResource MenuTextColor}"
+                                   FontSize="16"
+                                  >
+                                </Label>
+                            </Grid>
+                        </ViewCell.View>
+                    </customControls:ExtendedViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

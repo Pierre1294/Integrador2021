@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--PAGINA CENTRAL DE USUARIO-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:kanban="clr-namespace:Syncfusion.SfKanban.XForms;assembly=Syncfusion.SfKanban.XForms"      
+                xmlns:sync="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             xmlns:local="clr-namespace:AppPFashions.Pages"
+             x:Class="AppPFashions.Pages.UserPage"
+             Title="PERÚ FASHIONS S.A.C."
+             BackgroundColor="{StaticResource BackgroundColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem    
+            x:Name="tlb_viewpdf"            
+            Icon="ic_view_pdf.png"            
+            Priority="0" Order="Primary"
+            Clicked="Tlb_viewpdf_Clicked"/>
+        <ToolbarItem
+            x:Name="tlb_auditdefectos"
+            Clicked="Tlb_auditdefectos_Clicked"
+            Icon="ic_repdefectos.png"            
+            Priority="1" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    
+    <ScrollView Orientation="Vertical">
+        
+        <Grid RowSpacing="0" BackgroundColor="#EEEEEE">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+                        
+            
+            <Grid x:Name="auditoria2" RowSpacing="0" Grid.Row="1" Padding="0,0,0,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <StackLayout Orientation="Vertical" Padding="10,10,10,10" Grid.Row="0">
+                    <Frame BackgroundColor="#FFFFFF" Padding="2" HasShadow="{OnPlatform Default=true, iOS=false, macOS=false}">
+
+                        <Label Text="AUDITORIAS DESAPROBADAS" FontAttributes="Bold" TextColor="#404040" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand"
+                                   FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=22}, iOS={OnIdiom Phone=18, Tablet=20}, macOS=20, UWP={OnIdiom Phone=18, Tablet=22, Desktop=22}}" />
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout Orientation="Vertical" Padding="10,0,0,0" Grid.Row="1">
+                    <Label x:Name="txtaudi2" FontAttributes="Bold" TextColor="#606060" 
+                               FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=22}, iOS={OnIdiom Phone=18, Tablet=20}, macOS=20, UWP={OnIdiom Phone=28, Tablet=22, Desktop=22}}" />
+                    
+                </StackLayout>
+                <sync:SfListView x:Name="listView_cfinal"
+                    Grid.Row="2"
+                    Padding="10,13,10,-5"
+                    SelectionMode="None"
+                    Orientation="Horizontal"
+                    ItemSize="{OnPlatform Android={OnIdiom Phone=173, Tablet=180}, iOS={OnIdiom Phone=125, Tablet=250}, macOS=170, UWP={OnIdiom Phone=160, Tablet=170, Desktop=170}}"
+                    HeightRequest="{OnPlatform Default=220, iOS={OnIdiom Phone=170, Tablet=280}, UWP={OnIdiom Phone=200}}"
+                    ItemSpacing="5,10,5,10"
+                     ItemTapped="ListView_cfinal_ItemTapped">
+                    <sync:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#FFFFFF" Padding="2" HasShadow="{OnPlatform Default=true, iOS=false, macOS=false}">
+                                <Grid RowSpacing="8" Padding="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.3*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="60" WidthRequest="60" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Source="circulo_purple.png"></Image>
+                                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding clinea}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"></Label>
+
+                                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" RowSpacing="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1.5*" />
+                                            <RowDefinition Height="1.5*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding nordpr}" TextColor="DimGray" VerticalOptions="CenterAndExpand" FontSize="17" FontAttributes="Bold" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="14" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   		                Text="{Binding dclien}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="13" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   			            Text="{Binding dcarub}" VerticalOptions="FillAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" FontSize="12" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   			            Text="{Binding dopera}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" FontSize="12" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   			        Text="{Binding ctraba}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="4" Grid.Column="1" FontSize="12" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
+			   			        Text="{Binding faudit,StringFormat='{0:dd-MM-yyyy}'}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+
+                                    </Grid>
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </sync:SfListView.ItemTemplate>
+                </sync:SfListView>
+            </Grid>
+
+            <Grid x:Name="auditoria3" RowSpacing="0" Grid.Row="3" Padding="0,0,0,20">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <StackLayout Orientation="Vertical" Padding="10,0,0,0">
+                    <Label x:Name="txtaudi3" FontAttributes="Bold" TextColor="#606060" 
+                               FontSize="{OnPlatform Android={OnIdiom Phone=20, Tablet=22}, iOS={OnIdiom Phone=18, Tablet=20}, macOS=20, UWP={OnIdiom Phone=28, Tablet=22, Desktop=22}}" />
+
+                </StackLayout>
+                <sync:SfListView x:Name="listView_transfer"
+                    Grid.Row="1"
+                    Padding="10,13,10,-5"
+                    SelectionMode="None"
+                    Orientation="Horizontal"
+                    ItemSize="{OnPlatform Android={OnIdiom Phone=173, Tablet=180}, iOS={OnIdiom Phone=125, Tablet=250}, macOS=170, UWP={OnIdiom Phone=160, Tablet=170, Desktop=170}}"
+                    HeightRequest="{OnPlatform Default=220, iOS={OnIdiom Phone=170, Tablet=280}, UWP={OnIdiom Phone=200}}"
+                    ItemSpacing="5,10,5,10"
+                     ItemTapped="ListView_transfer_ItemTapped">
+                    <sync:SfListView.ItemTemplate>
+                        <DataTemplate>
+                            <Frame BackgroundColor="#FFFFFF" Padding="2" HasShadow="{OnPlatform Default=true, iOS=false, macOS=false}">
+                                <Grid RowSpacing="8" Padding="5">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="0.3*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Image Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" HeightRequest="60" WidthRequest="60" VerticalOptions="StartAndExpand" HorizontalOptions="CenterAndExpand" Source="circulo_purple.png"></Image>
+                                    <Label Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Text="{Binding clinea}" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" TextColor="White" FontAttributes="Bold"></Label>
+
+                                    <Grid Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="0" RowSpacing="5">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="*" />
+                                            <RowDefinition Height="1.5*" />
+                                            <RowDefinition Height="1.5*" />
+                                            <RowDefinition Height="*" />
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding nordpr}" TextColor="DimGray" VerticalOptions="CenterAndExpand" FontSize="17" FontAttributes="Bold" HorizontalOptions="StartAndExpand" HorizontalTextAlignment="Start" />
+
+                                        <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" FontSize="14" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   		                Text="{Binding dclien}" VerticalTextAlignment="Center" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" FontSize="13" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   			            Text="{Binding dcarub}" VerticalOptions="FillAndExpand" VerticalTextAlignment="Start" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" FontSize="12" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   			            Text="{Binding dopera}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="4" Grid.Column="0" FontSize="12" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="StartAndExpand"
+			   			        Text="{Binding ctraba}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+
+                                        <Label Grid.Row="4" Grid.Column="1" FontSize="12" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="EndAndExpand"
+			   			        Text="{Binding faudit,StringFormat='{0:dd-MM-yyyy}'}" VerticalOptions="FillAndExpand" VerticalTextAlignment="End" HorizontalTextAlignment="Start"/>
+
+                                    </Grid>
+
+                                </Grid>
+                            </Frame>
+                        </DataTemplate>
+                    </sync:SfListView.ItemTemplate>
+                </sync:SfListView>
+            </Grid>
+
+        </Grid>
+    </ScrollView>
+
+</ContentPage>

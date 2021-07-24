@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPFashions.Pages.LoginPage"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             Title="Cuenta de Usuario"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <StackLayout
+            BindingContext="{Binding NewLogin}"
+            Padding="8"
+            Spacing="16">
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Image
+                Source="ic_launcher_logo.png"
+                WidthRequest="100"
+                HeightRequest="100"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+            </Image>
+        </StackLayout>
+        <Grid
+                Margin="50,10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="Usuario:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start">
+            </Label>
+            <inputLayout:SfTextInputLayout
+                Grid.Column="1"
+                Grid.Row="0" 
+                Hint="Usuario"
+                LeadingViewPosition="Inside" >
+                <Entry
+                    x:Name="user"                    
+                    Text="{Binding User}" />
+            </inputLayout:SfTextInputLayout>
+
+            <Label
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Text="Contraseña:"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Start">
+            </Label>
+            <inputLayout:SfTextInputLayout
+                Grid.Column="1"
+                Grid.Row="1"
+                x:Name="passwordLayout"
+                CharMaxLength="8"                    
+                EnablePasswordVisibilityToggle="true"                    
+                Hint="Password"
+                ShowCharCount="true">
+                <Entry
+                    x:Name="password"
+                    IsPassword="true"
+                    Text="{Binding Password}" />
+            </inputLayout:SfTextInputLayout>
+
+        </Grid>
+        <StackLayout
+                Orientation="Horizontal"
+                HorizontalOptions="Center">
+            <Label
+                    Text="Recuerdame"
+                    VerticalOptions="Center">
+            </Label>
+            <Switch
+                    IsToggled="{Binding IsRemembered, Mode=TwoWay}">
+            </Switch>
+        </StackLayout>
+        <Label
+                HorizontalOptions="Center"
+                Text="¿Haz olvidado tu contraseña?"
+                TextColor="Blue">
+            <Label.GestureRecognizers>
+                <TapGestureRecognizer
+                        Command="{Binding RecoverPasswordCommand}">
+                </TapGestureRecognizer>
+            </Label.GestureRecognizers>
+
+        </Label>
+        <ActivityIndicator
+                IsRunning="{Binding IsRunning, Mode=TwoWay}">
+        </ActivityIndicator>
+        <StackLayout
+                Margin="80,0">
+            <Button
+                Command="{Binding LoginCommand}"
+                BackgroundColor="Navy"
+                BorderRadius="23"
+                FontAttributes="Bold"
+                HeightRequest="46"  
+                IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
+                TextColor="White"                
+                Text="Ingresar">
+            </Button>
+
+        </StackLayout>
+    </StackLayout>
+</ContentPage>

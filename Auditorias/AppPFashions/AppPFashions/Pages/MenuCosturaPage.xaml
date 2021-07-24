@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPFashions.Pages.MenuCosturaPage"
+             Title="Costura"
+             xmlns:customControls="clr-namespace:AppPFashions.CustomControls;assembly=AppPFashions"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem    
+            x:Name="tlb_viewpdf"            
+            Icon="ic_view_pdf.png"            
+            Priority="0" Order="Primary"
+            Clicked="Tlb_viewpdf_Clicked"/>
+    </ContentPage.ToolbarItems>
+    <StackLayout>
+        <ListView
+            ItemsSource="{Binding ListaMenuCostura}"
+            HasUnevenRows="True"
+            SeparatorVisibility="Default">
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <customControls:ExtendedViewCell SelectedBackgroundColor="#E4E4E5">
+                        <ViewCell.View>
+
+                            <Grid>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding NavigateCommandUser}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image 
+                                       Source="{Binding MenuCosturaImage}"
+                                       Grid.Column="0"
+                                       WidthRequest="40"
+                                       HeightRequest="40">
+                                    </Image>
+                                </Grid>
+
+                                <Label 
+                                    Grid.Column="1"
+                                    VerticalOptions="Center"                                   
+                                    Text="{Binding MenuCosturaName}"                                   
+                                    FontSize="16">
+                                </Label>
+                            </Grid>
+                        </ViewCell.View>
+                    </customControls:ExtendedViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>

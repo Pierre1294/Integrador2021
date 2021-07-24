@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppPFashions.Pages.QualityPage"
+             Title="Auditorías QA"
+             xmlns:customControls="clr-namespace:AppPFashions.CustomControls;assembly=AppPFashions"
+             xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
+             xmlns:textinput="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:localupper="clr-namespace:AppPFashions"
+             BackgroundColor="{StaticResource BackgroundColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem    
+            x:Name="tlb_viewpdf"            
+            Icon="ic_view_pdf.png"            
+            Priority="0" Order="Primary"
+            Clicked="Tlb_viewpdf_Clicked"/>
+        <ToolbarItem
+            x:Name="tlb_obsauditoria"       
+            Clicked="Tlb_obsauditoria_Clicked"
+            Icon="ic_obs.png"            
+            Priority="1" Order="Primary"/>
+    </ContentPage.ToolbarItems>
+    <popuplayout:SfPopupLayout x:Name="popupLayout">
+        <popuplayout:SfPopupLayout.PopupView>
+            <popuplayout:PopupView AppearanceMode="TwoButton"
+                                           AcceptButtonText="GRABAR"
+                                           DeclineButtonText="CANCELAR">
+                <popuplayout:PopupView.HeaderTemplate>
+                    <DataTemplate>
+                        <Label Text=" AGREGAR OBSERVACION" VerticalTextAlignment="Center" HorizontalTextAlignment="Start" FontAttributes="Bold"/>
+                    </DataTemplate>
+                </popuplayout:PopupView.HeaderTemplate>
+                <popuplayout:PopupView.ContentTemplate>
+                    <DataTemplate>
+                        <StackLayout x:Name="mainStack">
+                        <Grid BackgroundColor="White" Padding="15,20,15,0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition Height="100"/>
+                                <RowDefinition>
+                                    <RowDefinition.Height>
+                                        <OnPlatform x:TypeArguments="GridLength" Android="55" iOS="55">
+                                            <On Platform="UWP" Value="75"/>
+                                        </OnPlatform>
+                                    </RowDefinition.Height>
+                                </RowDefinition>
+                            </Grid.RowDefinitions>
+
+                            <Grid Grid.Row="0" BackgroundColor="#F3F3F9" Margin="0,15,0,0">
+                                <textinput:SfTextInputLayout Hint="Bloque" ContainerType="Outlined" BackgroundColor="Transparent">
+                                    <Entry x:Name="ety_cbloqu" BackgroundColor="Transparent" TextChanged="Ety_cbloqu_TextChanged"/>
+                                </textinput:SfTextInputLayout>
+                            </Grid>
+
+                            <Grid Grid.Row="1" BackgroundColor="#F3F3F9" Margin="0,15,0,0">
+                                <textinput:SfTextInputLayout Hint="Observación" ContainerType="Outlined" BackgroundColor="Transparent">
+                                    <Entry x:Name="ety_dobser" BackgroundColor="Transparent" TextChanged="Ety_dobser_TextChanged">
+                                        <Entry.Effects>
+                                            <localupper:EntryAllCapitalEffect/>
+                                        </Entry.Effects>
+                                    </Entry>
+                                </textinput:SfTextInputLayout>
+                            </Grid>
+                        </Grid>
+                        </StackLayout>
+                    </DataTemplate>
+                </popuplayout:PopupView.ContentTemplate>
+            </popuplayout:PopupView>
+        </popuplayout:SfPopupLayout.PopupView>
+    </popuplayout:SfPopupLayout>
+    <StackLayout>
+        <ListView
+            ItemsSource="{Binding ListaAuditorias}"
+            HasUnevenRows="True"
+            SeparatorVisibility="Default">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <customControls:ExtendedViewCell SelectedBackgroundColor="#E4E4E5">
+                        <ViewCell.View>
+
+                            <Grid>
+                                <Grid.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding NavigateCommandUser}"/>
+                                </Grid.GestureRecognizers>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="60" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+
+                                <Grid Padding="10">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding AuditoriaImage}"
+                                   Grid.Column="0"
+                                   WidthRequest="40"
+                                   HeightRequest="40">
+                                    </Image>
+                                </Grid>
+
+                                <Label Grid.Column="1"
+                                   VerticalOptions="Center"                                   
+                                   Text="{Binding AuditoriaName}"                                   
+                                   FontSize="16"
+                                  >
+                                </Label>
+                            </Grid>
+                        </ViewCell.View>
+                    </customControls:ExtendedViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+    </StackLayout>
+</ContentPage>

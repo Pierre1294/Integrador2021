@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+             xmlns:sync="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"            
+             xmlns:local="clr-namespace:AppPFashions.ViewModels"
+             xmlns:localupper="clr-namespace:AppPFashions"
+             xmlns:views="clr-namespace:SuaveControls.Views;assembly=SuaveControls.FloatingActionButton"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
+             xmlns:inputLayout="clr-namespace:Syncfusion.XForms.TextInputLayout;assembly=Syncfusion.Core.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+               xmlns:behaviors="clr-namespace:AppPFashions.Behaviors;assembly=AppPFashions"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+            xmlns:comboBox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms" 
+            xmlns:cards="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             xmlns:lstview="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+             x:Class="AppPFashions.Pages.CosturaFinalPage"            
+             Title="Auditoría de Costura Final"
+             BackgroundColor="{StaticResource MenuColor}"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             BarBackgroundColor="#F20C36"
+            NavigationPage.HasBackButton="False">
+    <ContentPage Title="Nuevo"
+                 Icon="nuevo.png">
+        <StackLayout>
+            <!--BindingContext="{Binding CosProVieMod}"-->
+            <StackLayout>
+                <Grid
+                    Margin="10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="{Binding SelBloque}" IsVisible="False"></Label>
+                    <Label
+                        Text="Bloque:"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"                                  
+                        VerticalOptions="Center">
+                    </Label>
+                    <Picker 
+                        x:Name="pck_bloque"
+                        SelectedIndexChanged="Pck_bloque_SelectedIndexChanged"
+                        Grid.Column="1"
+                        Grid.Row="0"                                                                   
+                        Title="Seleccione bloque">
+                    </Picker>
+                    <Label
+                        FontAttributes="Bold"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"                        
+                        Text="Fecha:"
+                        VerticalOptions="Center">
+                    </Label>
+                    <DatePicker 
+                        x:Name="dpk_fechaauditoria"
+                        Format="dd - MMM - yyyy"
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        DateSelected="Dpk_fechaauditoria_DateSelected">
+                    </DatePicker>
+                    <Button 
+                        x:Name="btn_agregarauditoria"
+                        BackgroundColor="#3D57AE"
+                        BorderRadius="25"       
+                        Clicked="btn_agregarauditoria_Clicked"
+                        FontAttributes="Bold"
+                        Grid.Column="4"
+                        Grid.Row="0"
+                        Text="Agregar"                           
+                        TextColor="White">
+                    </Button>
+                </Grid>
+            </StackLayout>
+            <BoxView
+            Color="#3D57AE"
+            HeightRequest="2">
+            </BoxView>
+            <StackLayout>
+                <Grid Margin="10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="0.3*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                        FontAttributes="Bold"                        
+                        FontSize="Medium"                        
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"
+                        Text="Secuencia:"                         
+                        VerticalOptions="Center">
+                    </Label>
+                    <Label 
+                        x:Name="lbl_nsecue"                        
+                        FontAttributes="Bold"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        FontSize="Medium"                        
+                        TextColor="Black">
+                    </Label>
+                </Grid>
+            </StackLayout>
+
+            <Label Text=" Seleccione una OP" FontSize="17" FontAttributes="Bold"></Label>
+            <ScrollView Orientation="Vertical" Margin="0">
+                <border:SfBorder                 
+                   BorderColor="#B0C4DE"                             
+                    BorderWidth="5"
+                    CornerRadius="20"                    
+                    Padding="5">
+                    <sync:SfChipGroup 
+                        x:Name="sfchip_op"                          
+                        ItemHeight="40"
+                        SelectedChipTextColor="White"
+                        SelectionChanged="Sfchip_op_SelectionChanged"                               
+                        ChipPadding="8,8,0,0"                                                    
+                        DisplayMemberPath="nordpr"                    
+                        SelectedChipBackgroundColor="#3D57AE"                        
+                        Type="Choice"
+                        ChipTextSize="17">
+                        
+                    <sync:SfChipGroup.ChipLayout>
+                        <FlexLayout
+                                HorizontalOptions="Start" 
+                                VerticalOptions="Center" 
+                                Direction="Row" 
+                                Wrap="Wrap" 
+                                JustifyContent="Start" 
+                                AlignContent="Start" 
+                                AlignItems="Start"/>
+                    </sync:SfChipGroup.ChipLayout>
+                </sync:SfChipGroup>     
+                    
+                </border:SfBorder>
+            </ScrollView>
+      
+            <StackLayout>
+                <Grid
+                Margin="10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.6*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="0.4*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <!--<ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="0.5*"/>-->
+                    </Grid.ColumnDefinitions>
+                    <sync:SfCheckBox x:Name="sf_check_op" 
+                                     Text="OP" 
+                                     IsEnabled="False"
+                                     Grid.Column="0"
+                                     Grid.Row="0"
+                                     StateChanged="Sf_check_op_StateChanged">
+                        
+                    </sync:SfCheckBox>
+                    
+                    <Entry
+                        x:Name="ety_op"                     
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        IsEnabled="False"
+                        Keyboard="Numeric"
+                        Text="{Binding Nordpr, Mode=TwoWay}">
+                        <Entry.Behaviors>
+                            <behaviors:EntryLengthValidatorBehavior MaxLength="6" />
+                            <behaviors:NumberValidationBehavior />
+                        </Entry.Behaviors>
+                    </Entry>
+                    <Button
+                        x:Name="btn_buscarop"
+                        BackgroundColor="#3D57AE"
+                        BorderRadius="15"  
+                        Command="{Binding BuscarOP}"
+                        Clicked="btn_buscarop_Clicked"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        IsEnabled="False"
+                        Text="OK"                      
+                        TextColor="White">
+                    </Button>
+                    <Label
+                        FontAttributes="Bold"
+                        Grid.Column="3"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"
+                        Text="Cliente:"
+                        VerticalOptions="Center">
+                    </Label>
+                    <border:SfBorder 
+                            x:Name="borderdcliente" 
+                            BorderColor="LightGray"                             
+                            BorderWidth="2"
+                            CornerRadius="20" 
+                            Grid.Column="4"                        
+                            Grid.Row="0">
+                        <Label 
+                            x:Name="lbl_descliente"
+                            FontSize="Medium"
+                            Text="{Binding Dclien, Mode=TwoWay}"
+                            Margin="10,5"/>
+                    </border:SfBorder>
+                </Grid>
+            </StackLayout>
+
+            <Label Text=" Seleccione un combo" FontSize="17" FontAttributes="Bold"></Label>
+            <ScrollView Orientation="Vertical" Margin="0">
+                <border:SfBorder 
+                    BorderColor="#B0C4DE"                             
+                    BorderWidth="5"
+                    CornerRadius="20"                    
+                    Padding="5">
+                <sync:SfChipGroup 
+                        x:Name="sfchip_combo"
+                        ItemHeight="40"
+                        SelectedChipTextColor="White"                        
+                        ChipPadding="8,8,0,0"                                                       
+                        DisplayMemberPath="dcarub"                                                            
+                        SelectedChipBackgroundColor="#3D57AE"   
+                        SelectionChanged="Sfchip_combo_SelectionChanged"
+                        VerticalOptions="Center"
+                        Type="Choice"
+                        ChipTextSize="17">
+                <sync:SfChipGroup.ChipLayout>
+                    <FlexLayout
+                                HorizontalOptions="Start" 
+                                VerticalOptions="Center" 
+                                Direction="Row" 
+                                Wrap="Wrap" 
+                                JustifyContent="Start" 
+                                AlignContent="Start" 
+                                AlignItems="Start"/>
+                </sync:SfChipGroup.ChipLayout>
+            </sync:SfChipGroup>
+            </border:SfBorder>
+            </ScrollView>
+   
+            <Label Text="" FontSize="16" FontAttributes="Bold"></Label>
+            <Label Text=" Muestreo AQL" FontSize="17" FontAttributes="Bold"></Label>
+            <StackLayout>
+                <Grid
+                Margin="10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="0.5*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"
+                        Text="Tamaño Lote:"                        
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <Entry                        
+                        x:Name="ety_lote"
+                        Unfocused="ety_lote_Unfocused"
+                        Grid.Column="1"
+                        Grid.Row="0"                        
+                        IsEnabled="False"
+                        Keyboard="Numeric">
+                    </Entry>
+                    <Label
+                        FontAttributes="Bold"
+                        Grid.Column="2"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"
+                        Text="Tamaño Muestra:"                        
+                        VerticalOptions="Center">
+                    </Label>
+
+                    <Entry                        
+                        x:Name="ety_muestra"
+                        Grid.Column="3"
+                        Grid.Row="0"                        
+                        IsEnabled="False"
+                        Keyboard="Numeric">
+                    </Entry>
+                    <syncfusion:SfCheckBox
+                        x:Name="cbxaudittot"
+                        StateChanged="Cbxaudittot_StateChanged"
+                        Grid.Column="4"
+                        Grid.Row="0"
+                        IsChecked="False"
+                        Text="Auditar 100%">
+                    </syncfusion:SfCheckBox>
+                </Grid>
+            </StackLayout>
+
+            <StackLayout>
+                <Grid
+                Margin="10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"/>
+                        <ColumnDefinition Width="1*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        x:Name="lbl_aql"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"                        
+                        VerticalOptions="Center">
+                    </Label>
+     
+                    <Label
+                        x:Name="lbl_aql_defectos"
+                        FontSize="16"
+                        FontAttributes="Bold"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        HorizontalOptions="Start"                        
+                        VerticalOptions="Center">
+                    </Label>
+      
+                </Grid>
+            </StackLayout>
+            
+            <Label Text=" Datos Adicionales" FontSize="17" FontAttributes="Bold"></Label>
+            <StackLayout>
+                <Grid Margin="10,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label                                                                                          
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Start"
+                        Text="Obs.:"                         
+                        VerticalOptions="Center">
+                    </Label>
+                    <Entry 
+                        x:Name="ety_observ"                                                
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        FontSize="Medium"                        
+                        TextColor="Black">
+                        <Entry.Effects>
+                            <localupper:EntryAllCapitalEffect/>
+                        </Entry.Effects>
+                    </Entry>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+        
+        <!-- *************** TAB DEFECTOS *************** -->
+        
+    </ContentPage>
+    <ContentPage Title="Defectos"
+                 Icon="defectos.png">
+        <ContentPage.Content>
+            <StackLayout>
+                <StackLayout HeightRequest="400">
+                    <StackLayout>
+                        <Grid
+                        Margin="10,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="2*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                            FontAttributes="Bold"                         
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            HorizontalOptions="Start"
+                            Text="Bloque:"                        
+                            VerticalOptions="Center">
+                            </Label>
+                            <Label
+                            x:Name="lbl_bloquedef"
+                            FontSize="Medium"
+                            Grid.Column="1"
+                            Grid.Row="0">
+                            </Label>
+                            <Label
+                            FontAttributes="Bold"                            
+                            Grid.Column="2"
+                            Grid.Row="0"
+                            HorizontalOptions="Start"
+                            Text="Fecha:"                        
+                            VerticalOptions="Center">
+                            </Label>
+                            <Label
+                            x:Name="lbl_fechadef"
+                            FontSize="Medium"
+                            Grid.Column="3"
+                            Grid.Row="0">
+                            </Label>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout >
+                        <Grid
+                        Margin="10,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="0.3*"/>
+                                <ColumnDefinition Width="4*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label 
+                            FontAttributes="Bold"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            HorizontalOptions="Start"
+                            Text="Código:"
+                            VerticalOptions="Center">
+                            </Label>
+                            <Image
+                            x:Name="img_defecto"
+                            Grid.Column="1"
+                            Grid.Row="0"       
+                            HeightRequest="20"
+                            IsEnabled="False"
+                            Source="sincronizar.png"
+                            WidthRequest="20">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                        x:Name="img_defectos"
+                                        Tapped="img_defectos_Tapped">
+                                    </TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+  
+                            <comboBox:SfComboBox x:Name="pck_defectos" 
+                                AllowFiltering="True"                        
+                                DisplayMemberPath="ddefec" 
+                                Grid.Column="2" Grid.Row="0"                        
+                                HighlightedTextColor="Red"
+                                HighlightedTextFontAttributes="Bold"
+                                IsEditableMode="true"                                                
+                                SelectedValuePath="coddef"
+                                SuggestionMode="Contains" 
+                                SelectionChanged="Pck_defectos_SelectionChanged"                                                                                                            
+                                TextHighlightMode="MultipleOccurrence"                                                                                         
+                                TextSize="17"
+                                Watermark="Buscar defecto">
+                            </comboBox:SfComboBox>
+     
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout>
+                        <Grid
+                            Margin="10,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="3*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label                            
+                            FontAttributes="Bold"
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            HorizontalOptions="Start"
+                            Text="Obser.:"
+                            VerticalOptions="Center">
+                            </Label>
+                            <Entry
+                                x:Name="ety_obsdefecto"                        
+                                FontSize="Medium"
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                IsEnabled="False">
+                                <Entry.Effects>
+                                    <localupper:EntryAllCapitalEffect/>
+                                </Entry.Effects>
+                            </Entry>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout>
+                        <Grid
+                        Margin="10,10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="0.3*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Label                            
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Cantidad:"
+                        FontAttributes="Bold"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start">
+                            </Label>
+                            <Entry
+                        x:Name="ety_cantdefecto"
+                        Grid.Column="1"
+                        Grid.Row="0"
+                        IsEnabled="False"
+                        Keyboard="Numeric">
+                            </Entry>
+                            <Button
+                        x:Name="btn_agregardefecto"
+                        FontAttributes="Bold"
+                        BackgroundColor="#3D57AE"                        
+                        BorderRadius="25"
+                        Clicked="btn_agregardefecto_Clicked"
+                        Grid.Column="4"
+                        Grid.Row="0"   
+                        IsEnabled="False"
+                        TextColor="White"
+                        Text="Agregar">
+                            </Button>
+                        </Grid>
+                    </StackLayout>
+                    <StackLayout>
+                        <BoxView
+                            Color="#3D57AE"
+                            HeightRequest="2">
+                        </BoxView>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout>
+                    <ListView
+                        x:Name="lsv_defectos"                   
+                        BackgroundColor="#F0F0F0"
+                        HasUnevenRows="True"
+                        IsPullToRefreshEnabled="True"                     
+                        ItemSelected="lsv_defectos_ItemSelected"  
+                        SelectionMode="None"
+                        SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <ViewCell>
+                                    <Frame 
+                                        CornerRadius="2"
+                                        HasShadow="True"
+                                        Margin="4"
+                                        OutlineColor="White"
+                                        Padding="5">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                            x:Name="tgrlsv_defectos"/>
+                                        </Frame.GestureRecognizers>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="4*"/>
+                                                <ColumnDefinition Width="0.4*"/>
+                                                <ColumnDefinition Width="0.4*"/>
+                                                <ColumnDefinition Width="0.4*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <StackLayout 
+                                            Grid.Column="0"
+                                            VerticalOptions="Center">
+                                                <Label                                                
+                                                FontSize="Medium"
+                                                Text="{Binding coddef}"
+                                                TextColor="Black">
+                                                </Label>
+                                                <Label
+                                                Text="{Binding descri}"
+                                                TextColor="Black">
+                                                </Label>
+                                            </StackLayout>
+                                            <StackLayout
+                                             Grid.Column="1">
+                                                <Image
+                                                x:Name="img_camara"                                                   
+                                                HeightRequest="50"                                                
+                                                Source="camera.png"  
+                                                IsVisible="{Binding vphoto}"
+                                                WidthRequest="50">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                        x:Name="img_capturarfoto"                                                        
+                                                        Tapped="img_capturarfoto_Tapped"
+                                                        CommandParameter="{Binding .}">
+                                                        </TapGestureRecognizer>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
+                                            <StackLayout
+                                              Grid.Column="2">
+                                                <Image
+                                                x:Name="img_viewimg"                                                   
+                                                HeightRequest="50"                                                
+                                                Source="viewimage.png"
+                                                IsVisible="{Binding vimage}"
+                                                WidthRequest="50">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                        x:Name="img_viewjpg"                                                        
+                                                        Tapped="img_viewjpg_Tapped"
+                                                        CommandParameter="{Binding .}">
+                                                        </TapGestureRecognizer>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
+                                            <StackLayout
+                                                Grid.Column="3">
+                                                <Image
+                                                    x:Name="img_deleteimg"                                                   
+                                                    HeightRequest="50"                                                
+                                                    Source="deleteimg.png"
+                                                    IsVisible="{Binding vimage}"
+                                                    WidthRequest="50">
+                                                    <Image.GestureRecognizers>
+                                                        <TapGestureRecognizer
+                                                            x:Name="img_deletejpg"                                                        
+                                                           Tapped="img_deletejpg_Tapped"
+                                                            CommandParameter="{Binding .}">
+                                                        </TapGestureRecognizer>
+                                                    </Image.GestureRecognizers>
+                                                </Image>
+                                            </StackLayout>
+                                        </Grid>
+                                    </Frame>
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                <StackLayout>
+                    <sync:SfRadioGroup 
+                    x:Name="radioGroup" 
+                    Orientation="Horizontal" 
+                    HorizontalOptions="CenterAndExpand" 
+                    Margin="0,20,0,0">
+                        <sync:SfRadioButton 
+                            x:Name="srb_audiaprobado"   
+                            StateChanged="Srb_audiaprobado_StateChanged"
+                            FontSize="18"
+                            CheckedColor="Blue"                            
+                            Text="Aprobado"/>
+                        <sync:SfRadioButton 
+                            x:Name="srb_audidesaprobado" 
+                            StateChanged="Srb_audidesaprobado_StateChanged"
+                            Text="Desaprobado"                                                      
+                            FontSize="18"
+                            CheckedColor="Red"/>
+                        <sync:SfRadioButton 
+                            x:Name="srb_audiaprobadoext"       
+                            StateChanged="Srb_audiaprobadoext_StateChanged"
+                            Text="Aprobado Ext."                                                    
+                            FontSize="18"
+                            CheckedColor="Green"/>
+                    </sync:SfRadioGroup>
+                </StackLayout>
+                <StackLayout
+                Margin="80,30">
+                    <Button 
+                        x:Name="btn_guardarauditoria"
+                        BackgroundColor="#3D57AE"
+                        BorderRadius="25"       
+                        Clicked="btn_guardarauditoria_Clicked"
+                        FontAttributes="Bold"
+                        HeightRequest="46"  
+                        Text="Guardar"                           
+                        TextColor="White"
+                        IsEnabled="False">
+                    </Button>
+                </StackLayout>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>
+    

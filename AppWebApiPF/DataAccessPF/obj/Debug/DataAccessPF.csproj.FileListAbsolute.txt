@@ -1,0 +1,12 @@
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\DataAccessPF.dll.config
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\DataAccessPF.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\DataAccessPF.pdb
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\EntityFramework.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\EntityFramework.SqlServer.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\EntityFramework.xml
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Debug\EntityFramework.SqlServer.xml
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Debug\DataAccessPF.csprojAssemblyReference.cache
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Debug\DataAccessPF.csproj.CoreCompileInputs.cache
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Debug\DataAccessPF.csproj.CopyComplete
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Debug\DataAccessPF.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Debug\DataAccessPF.pdb

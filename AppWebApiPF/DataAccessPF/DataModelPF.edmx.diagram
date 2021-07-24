@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="81c732a8c19b4f0e81c36b12a1b3d1ea" Name="Diagram1" ZoomLevel="97">
+        <EntityTypeShape EntityType="bdtexModel.paudit01" Width="2.375" PointX="2.375" PointY="0.625" />
+        <EntityTypeShape EntityType="bdtexModel.mtraba_view00" Width="1.5" PointX="7.375" PointY="0.625" />
+        <EntityTypeShape EntityType="bdtexModel.mtraba00" Width="1.5" PointX="0.5" PointY="0.625" />
+        <EntityTypeShape EntityType="bdtexModel.mclien00" Width="1.5" PointX="0.5" PointY="5.75" />
+        <EntityTypeShape EntityType="bdtexModel.padcor00" Width="1.5" PointX="7.375" PointY="3.625" />
+        <EntityTypeShape EntityType="bdtexModel.pcoxes00" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="bdtexModel.pdgorp00" Width="1.5" PointX="13.125" PointY="0.75" />
+        <EntityTypeShape EntityType="bdtexModel.pdefec01" Width="1.5" PointX="5.375" PointY="0.625" />
+        <AssociationConnector Association="bdtexModel.FK_pdefec01_paudit01" />
+        <EntityTypeShape EntityType="bdtexModel.paudob00" Width="1.5" PointX="2.875" PointY="12.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

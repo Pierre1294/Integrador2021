@@ -1,0 +1,534 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdtexModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="mclien00">
+    <Key>
+      <PropertyRef Name="cclien" />
+    </Key>
+    <Property Name="cclien" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="drzsoc" Type="char" MaxLength="60" />
+    <Property Name="dappat" Type="char" MaxLength="20" />
+    <Property Name="dapmat" Type="char" MaxLength="20" />
+    <Property Name="dnombr" Type="char" MaxLength="20" />
+    <Property Name="cagent" Type="char" MaxLength="6" />
+    <Property Name="cdcide" Type="char" MaxLength="2" />
+    <Property Name="ndcide" Type="char" MaxLength="10" />
+    <Property Name="creguc" Type="char" MaxLength="11" />
+    <Property Name="cpaise" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="cciuda" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="cznpos" Type="char" MaxLength="12" />
+    <Property Name="ddirec" Type="char" MaxLength="60" Nullable="false" />
+    <Property Name="ntfcli01" Type="char" MaxLength="15" />
+    <Property Name="ntfcli02" Type="char" MaxLength="15" />
+    <Property Name="numfax" Type="char" MaxLength="15" />
+    <Property Name="drefer01" Type="char" MaxLength="60" />
+    <Property Name="drefer02" Type="char" MaxLength="60" />
+    <Property Name="ctpcli" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="cfmtpa" Type="char" MaxLength="2" />
+    <Property Name="dserie" Type="varchar" MaxLength="15" />
+    <Property Name="ddiren" Type="varchar" MaxLength="150" />
+    <Property Name="ndiasa" Type="tinyint" />
+    <Property Name="spoedi" Type="char" MaxLength="1" />
+    <Property Name="setiqu" Type="char" MaxLength="1" />
+    <Property Name="sclien" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ctpclo" Type="char" MaxLength="1" />
+    <Property Name="cusuar" Type="char" MaxLength="8" Nullable="false" />
+    <Property Name="svigen" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="fvigen" Type="datetime" Nullable="false" />
+    <Property Name="padici" Type="money" />
+    <Property Name="qadici" Type="int" />
+    <Property Name="strade" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="crespo" Type="char" MaxLength="6" />
+    <Property Name="stesti" Type="char" MaxLength="1" />
+    <Property Name="cclmas" Type="char" MaxLength="2" />
+    <Property Name="scosse" Type="char" MaxLength="1" />
+    <Property Name="socuse" Type="char" MaxLength="1" />
+    <Property Name="socuse2" Type="char" MaxLength="1" />
+    <Property Name="pmamin" Type="money" />
+    <Property Name="dabrev" Type="char" MaxLength="10" />
+    <Property Name="cagin1" Type="char" MaxLength="6" />
+    <Property Name="cagin2" Type="char" MaxLength="6" />
+    <Property Name="drzabr" Type="char" MaxLength="15" />
+    <Property Name="flgsau" Type="char" MaxLength="1" />
+    <Property Name="nivaql" Type="char" MaxLength="5" />
+    <Property Name="cejcta" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="padcor00">
+    <Key>
+      <PropertyRef Name="ctpord" />
+      <PropertyRef Name="nordpr" />
+      <PropertyRef Name="nordct" />
+    </Key>
+    <Property Name="ctpord" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nordpr" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="nordct" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="ccarub" Type="char" MaxLength="6" />
+    <Property Name="qpropo01" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo02" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo03" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo04" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo05" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo06" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo07" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo08" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo09" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo10" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo11" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo12" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="qlatiz" Type="real" />
+    <Property Name="qantiz" Type="real" />
+    <Property Name="qretiz" Type="real" />
+    <Property Name="cencog" Type="varchar" MaxLength="6" />
+    <Property Name="nmesas" Type="char" MaxLength="2" />
+    <Property Name="sservi" Type="char" MaxLength="1" />
+    <Property Name="fprogr" Type="datetime" />
+    <Property Name="frepro" Type="datetime" />
+    <Property Name="fprmod" Type="datetime" />
+    <Property Name="fprmof" Type="datetime" />
+    <Property Name="clnprd" Type="char" MaxLength="20" />
+    <Property Name="dobsav" Type="char" MaxLength="60" />
+    <Property Name="dobspl" Type="char" MaxLength="60" />
+    <Property Name="dobshb" Type="varchar" MaxLength="150" />
+    <Property Name="savios" Type="char" MaxLength="1" />
+    <Property Name="qgirad" Type="int" />
+    <Property Name="qcorte" Type="int" />
+    <Property Name="qhabil" Type="int" />
+    <Property Name="qdesco" Type="int" />
+    <Property Name="qdesmu" Type="int" />
+    <Property Name="fmddes" Type="datetime" />
+    <Property Name="fmddeh" Type="datetime" />
+    <Property Name="clnpre" Type="char" MaxLength="20" />
+    <Property Name="nperim" Type="int" />
+    <Property Name="nmodul" Type="char" MaxLength="6" />
+    <Property Name="stizad" Type="char" MaxLength="1" />
+    <Property Name="nordco" Type="char" MaxLength="50" />
+    <Property Name="qmixte" Type="smallmoney" />
+    <Property Name="qmixco" Type="smallmoney" />
+    <Property Name="qmixcl" Type="smallmoney" />
+    <Property Name="qmixha" Type="smallmoney" />
+    <Property Name="savcor" Type="char" MaxLength="1" />
+    <Property Name="scalid" Type="char" MaxLength="1" />
+    <Property Name="fcalid" Type="datetime" />
+    <Property Name="qdepur" Type="int" />
+    <Property Name="sfinal" Type="char" MaxLength="1" />
+    <Property Name="sanula" Type="char" MaxLength="1" />
+    <Property Name="ndcref" Type="char" MaxLength="10" />
+    <Property Name="fguref" Type="datetime" />
+    <Property Name="ctporc" Type="char" MaxLength="2" />
+    <Property Name="ndocum" Type="char" MaxLength="7" />
+    <Property Name="qingug" Type="int" />
+    <Property Name="dobref" Type="varchar" MaxLength="100" />
+    <Property Name="cprser" Type="char" MaxLength="6" />
+    <Property Name="sulcor" Type="char" MaxLength="1" />
+    <Property Name="savcom" Type="char" MaxLength="1" />
+    <Property Name="ntizad" Type="varchar" MaxLength="10" />
+    <Property Name="scorad" Type="char" MaxLength="1" />
+    <Property Name="fchpco" Type="datetime" />
+    <Property Name="flgsby" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="paudit01">
+    <Key>
+      <PropertyRef Name="careas" />
+      <PropertyRef Name="faudit" />
+      <PropertyRef Name="nsecue" />
+      <PropertyRef Name="clinea" />
+    </Key>
+    <Property Name="careas" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="faudit" Type="datetime" Nullable="false" />
+    <Property Name="nsecue" Type="smallint" Nullable="false" />
+    <Property Name="clinea" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ctpord" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nordpr" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="nordct" Type="char" MaxLength="15" />
+    <Property Name="cmarbe" Type="char" MaxLength="15" />
+    <Property Name="ccarub" Type="char" MaxLength="6" />
+    <Property Name="npieza" Type="smallint" />
+    <Property Name="cencog" Type="char" MaxLength="10" />
+    <Property Name="citems" Type="char" MaxLength="10" />
+    <Property Name="ccolor" Type="char" MaxLength="6" />
+    <Property Name="npanos" Type="int" />
+    <Property Name="dtalla" Type="char" MaxLength="25" />
+    <Property Name="qtotal" Type="int" />
+    <Property Name="dlotes" Type="char" MaxLength="20" />
+    <Property Name="ctraba" Type="char" MaxLength="6" />
+    <Property Name="copera" Type="char" MaxLength="3" />
+    <Property Name="cprove" Type="char" MaxLength="6" />
+    <Property Name="cmaqui" Type="char" MaxLength="2" />
+    <Property Name="cturno" Type="char" MaxLength="1" />
+    <Property Name="cparti" Type="char" MaxLength="8" />
+    <Property Name="nordco" Type="char" MaxLength="30" />
+    <Property Name="npacki" Type="tinyint" />
+    <Property Name="nlotes" Type="int" Nullable="false" />
+    <Property Name="nmuest" Type="int" Nullable="false" />
+    <Property Name="pcierr" Type="int" />
+    <Property Name="nrecup" Type="smallint" />
+    <Property Name="nsegun" Type="smallint" />
+    <Property Name="porcen" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="flgcie" Type="char" MaxLength="1" />
+    <Property Name="ndefec" Type="smallint" Nullable="false" />
+    <Property Name="status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="dobser" Type="nvarchar(max)" />
+    <Property Name="flgrau" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="nreaud" Type="tinyint" />
+    <Property Name="caudit" Type="char" MaxLength="6" />
+    <Property Name="flgext" Type="char" MaxLength="1" />
+    <Property Name="cliref" Type="char" MaxLength="2" />
+    <Property Name="fauref" Type="datetime" />
+    <Property Name="nseref" Type="smallint" />
+    <Property Name="cusuar" Type="char" MaxLength="6" />
+    <Property Name="fcreac" Type="datetime" />
+    <Property Name="fmodif" Type="datetime" />
+    <Property Name="nordpo" Type="tinyint" />
+    <Property Name="fprogr" Type="datetime" />
+    <Property Name="caudpr" Type="char" MaxLength="6" />
+    <Property Name="drefpr" Type="char" MaxLength="15" />
+    <Property Name="ctpaud" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="csuppl" Type="char" MaxLength="6" />
+    <Property Name="flgenv" Type="char" MaxLength="1" />
+    <Property Name="sanula" Type="char" MaxLength="1" />
+    <Property Name="ndesap" Type="tinyint" />
+    <Property Name="sautab" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="paudob00">
+    <Key>
+      <PropertyRef Name="idobse" />
+    </Key>
+    <Property Name="idobse" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="fregis" Type="datetime" />
+    <Property Name="clinea" Type="char" MaxLength="2" />
+    <Property Name="dobser" Type="varchar" MaxLength="255" />
+    <Property Name="cusuar" Type="char" MaxLength="6" />
+  </EntityType>
+  <EntityType Name="pcoxes00">
+    <Key>
+      <PropertyRef Name="ctpord" />
+      <PropertyRef Name="nordpr" />
+      <PropertyRef Name="cestil" />
+      <PropertyRef Name="ccarub" />
+    </Key>
+    <Property Name="ctpord" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="nordpr" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="cestil" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="ccarub" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="dcarub" Type="char" MaxLength="30" Nullable="false" />
+    <Property Name="ngrupo" Type="tinyint" />
+    <Property Name="ccolor" Type="char" MaxLength="6" />
+    <Property Name="ccodcl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="cescli" Type="varchar" MaxLength="30" />
+    <Property Name="fiscoh" Type="datetime" />
+    <Property Name="ffscoh" Type="datetime" />
+    <Property Name="fiscos" Type="datetime" />
+    <Property Name="ffscos" Type="datetime" />
+    <Property Name="fisco1" Type="datetime" />
+    <Property Name="ffsco1" Type="datetime" />
+    <Property Name="fidcos" Type="datetime" />
+    <Property Name="ffdcos" Type="datetime" />
+    <Property Name="fihabi" Type="datetime" />
+    <Property Name="ffhabi" Type="datetime" />
+    <Property Name="fiepco" Type="datetime" />
+    <Property Name="ffepco" Type="datetime" />
+    <Property Name="ficort" Type="datetime" />
+    <Property Name="ffcort" Type="datetime" />
+    <Property Name="firevt" Type="datetime" />
+    <Property Name="ffrevt" Type="datetime" />
+    <Property Name="fiingt" Type="datetime" />
+    <Property Name="ffingt" Type="datetime" />
+    <Property Name="facr" Type="datetime" />
+    <Property Name="fiacat" Type="datetime" />
+    <Property Name="ffacat" Type="datetime" />
+    <Property Name="fitent" Type="datetime" />
+    <Property Name="fftent" Type="datetime" />
+    <Property Name="fitert" Type="datetime" />
+    <Property Name="fftert" Type="datetime" />
+    <Property Name="fidefr" Type="datetime" />
+    <Property Name="ffdefr" Type="datetime" />
+    <Property Name="fiintj" Type="datetime" />
+    <Property Name="ffintj" Type="datetime" />
+    <Property Name="fidesh" Type="datetime" />
+    <Property Name="ffdesh" Type="datetime" />
+    <Property Name="fiingh" Type="datetime" />
+    <Property Name="ffingh" Type="datetime" />
+    <Property Name="falabd" Type="datetime" />
+    <Property Name="faprot" Type="datetime" />
+    <Property Name="dlnprd" Type="char" MaxLength="50" />
+    <Property Name="fiacab" Type="datetime" />
+    <Property Name="ffacab" Type="datetime" />
+    <Property Name="fiprad" Type="datetime" />
+    <Property Name="ffprad" Type="datetime" />
+    <Property Name="ficohi" Type="datetime" />
+    <Property Name="ffcohi" Type="datetime" />
+    <Property Name="fideco" Type="datetime" />
+    <Property Name="ffdeco" Type="datetime" />
+    <Property Name="fiemop" Type="datetime" />
+    <Property Name="ffemop" Type="datetime" />
+    <Property Name="ndespa" Type="tinyint" />
+    <Property Name="nordcs" Type="tinyint" />
+    <Property Name="dtpemb" Type="char" MaxLength="15" />
+    <Property Name="ddesti" Type="char" MaxLength="80" />
+    <Property Name="qitere" Type="int" />
+    <Property Name="qitems" Type="int" />
+    <Property Name="qgirad" Type="int" />
+    <Property Name="qcorte" Type="int" />
+    <Property Name="qhabil" Type="int" />
+    <Property Name="qdespf" Type="int" />
+    <Property Name="qdesse" Type="int" />
+    <Property Name="qcospf" Type="int" />
+    <Property Name="qcosse" Type="int" />
+    <Property Name="qsm1pf" Type="int" />
+    <Property Name="qsm1se" Type="int" />
+    <Property Name="qingac" Type="int" />
+    <Property Name="qencaj" Type="int" />
+    <Property Name="citems" Type="char" MaxLength="10" />
+    <Property Name="chespe" Type="char" MaxLength="2" />
+    <Property Name="dhespe" Type="nchar" MaxLength="50" />
+    <Property Name="cestij" Type="char" MaxLength="40" />
+    <Property Name="dcaruj" Type="char" MaxLength="6" />
+    <Property Name="cservi" Type="char" MaxLength="1" />
+    <Property Name="filavt" Type="datetime" />
+    <Property Name="fflavt" Type="datetime" />
+    <Property Name="ffrcos" Type="datetime" />
+    <Property Name="fiepra" Type="datetime" />
+    <Property Name="ffepra" Type="datetime" />
+    <Property Name="fingru" Type="datetime" />
+    <Property Name="fingtd" Type="datetime" />
+    <Property Name="fiehit" Type="datetime" />
+    <Property Name="ffehit" Type="datetime" />
+    <Property Name="faprmu" Type="datetime" />
+    <Property Name="firprc" Type="datetime" />
+    <Property Name="ffrprc" Type="datetime" />
+    <Property Name="ffraca" Type="datetime" />
+    <Property Name="qleadt" Type="int" />
+    <Property Name="cprepa" Type="char" MaxLength="15" />
+    <Property Name="sprdsm" Type="char" MaxLength="1" />
+    <Property Name="fifabw" Type="datetime" />
+    <Property Name="fffabw" Type="datetime" />
+    <Property Name="fitenh" Type="datetime" />
+    <Property Name="fftenh" Type="datetime" />
+  </EntityType>
+  <EntityType Name="pdefec01">
+    <Key>
+      <PropertyRef Name="careas" />
+      <PropertyRef Name="faudit" />
+      <PropertyRef Name="nsecue" />
+      <PropertyRef Name="clinea" />
+      <PropertyRef Name="codigo" />
+      <PropertyRef Name="coddef" />
+      <PropertyRef Name="cgrupo" />
+      <PropertyRef Name="cardef" />
+    </Key>
+    <Property Name="careas" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="faudit" Type="datetime" Nullable="false" />
+    <Property Name="nsecue" Type="smallint" Nullable="false" />
+    <Property Name="clinea" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="codigo" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="coddef" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="qcanti" Type="smallint" Nullable="false" />
+    <Property Name="dobser" Type="char" MaxLength="80" />
+    <Property Name="cgrupo" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="cardef" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="imgdef" Type="varchar" MaxLength="25" />
+  </EntityType>
+  <EntityType Name="pdgorp00">
+    <Key>
+      <PropertyRef Name="nordpr" />
+    </Key>
+    <Property Name="ctpord" Type="char" MaxLength="2" />
+    <Property Name="nordpr" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="femisi" Type="datetime" Nullable="false" />
+    <Property Name="cclien" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="cagent" Type="char" MaxLength="6" />
+    <Property Name="cestil" Type="char" MaxLength="5" Nullable="false" />
+    <Property Name="nversi" Type="tinyint" />
+    <Property Name="fembar" Type="datetime" Nullable="false" />
+    <Property Name="fembor" Type="datetime" />
+    <Property Name="finipr" Type="datetime" />
+    <Property Name="nordco" Type="char" MaxLength="30" />
+    <Property Name="dobser" Type="char" MaxLength="200" />
+    <Property Name="iprepr" Type="money" Nullable="false" />
+    <Property Name="ipresc" Type="money" Nullable="false" />
+    <Property Name="imgcon" Type="money" />
+    <Property Name="smgcon" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="imgcbr" Type="money" />
+    <Property Name="imguni" Type="money" />
+    <Property Name="smgcbr" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="smguni" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ifctpr" Type="decimal" Precision="3" Scale="2" />
+    <Property Name="cpater" Type="char" MaxLength="30" />
+    <Property Name="cescli" Type="char" MaxLength="10" />
+    <Property Name="descli" Type="char" MaxLength="60" />
+    <Property Name="sprxco" Type="char" MaxLength="1" />
+    <Property Name="ctempo" Type="char" MaxLength="3" />
+    <Property Name="cdivis" Type="char" MaxLength="3" />
+    <Property Name="padici" Type="decimal" Precision="7" Scale="2" />
+    <Property Name="qtotal" Type="int" />
+    <Property Name="cdivge" Type="char" MaxLength="2" />
+    <Property Name="ctipre" Type="char" MaxLength="2" />
+    <Property Name="sexpor" Type="char" MaxLength="1" />
+    <Property Name="ffrcos" Type="datetime" />
+    <Property Name="ffraca" Type="datetime" />
+    <Property Name="slqxop" Type="char" MaxLength="1" />
+    <Property Name="sordpr" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="cusuar" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="fulmod" Type="datetime" Nullable="false" />
+    <Property Name="dobsct" Type="varchar" MaxLength="300" />
+    <Property Name="iprsda" Type="money" />
+    <Property Name="dobcrt" Type="varchar" MaxLength="300" />
+    <Property Name="speddm" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="dobsfl" Type="varchar" MaxLength="300" />
+    <Property Name="ifleop" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="pmerma" Type="decimal" Precision="8" Scale="2" />
+    <Property Name="cgrtal" Type="char" MaxLength="2" />
+    <Property Name="scpsia" Type="char" MaxLength="1" />
+    <Property Name="squali" Type="char" MaxLength="1" />
+    <Property Name="srevis" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="pplane" Type="numeric" Precision="3" Scale="2" StoreGeneratedPattern="Computed" Nullable="false" />
+    <Property Name="fdispo" Type="datetime" />
+    <Property Name="fconsu" Type="datetime" />
+    <Property Name="srutmp" Type="char" MaxLength="1" />
+    <Property Name="fliqui" Type="datetime" />
+    <Property Name="splane" Type="char" MaxLength="1" />
+    <Property Name="dobsso" Type="varchar" MaxLength="250" />
+    <Property Name="ssaldo" Type="char" MaxLength="2" />
+    <Property Name="fumliq" Type="datetime" />
+    <Property Name="scotiz" Type="char" MaxLength="1" />
+    <Property Name="iprhil" Type="decimal" Precision="18" Scale="4" />
+    <Property Name="nhojas" Type="int" />
+    <Property Name="ffrbor" Type="datetime" />
+    <Property Name="slista" Type="char" MaxLength="1" />
+    <Property Name="slogis" Type="char" MaxLength="1" />
+    <Property Name="dconte" Type="varchar" MaxLength="150" />
+    <Property Name="smodpr" Type="char" MaxLength="1" />
+    <Property Name="stidis" Type="char" MaxLength="1" />
+    <Property Name="flqaca" Type="datetime" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'bdtex.dbo.mtraba_view00' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="mtraba_view00">
+    <Key>
+      <PropertyRef Name="straba" />
+      <PropertyRef Name="xsecci" />
+    </Key>
+    <Property Name="ctraba" Type="char" MaxLength="6" />
+    <Property Name="dtraba" Type="varchar" MaxLength="30" />
+    <Property Name="dcargo" Type="varchar" MaxLength="25" />
+    <Property Name="straba" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="dsecci" Type="char" MaxLength="35" />
+    <Property Name="xsecci" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="xlnprd" Type="char" MaxLength="2" />
+    <Property Name="nlbele" Type="char" MaxLength="20" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'bdtex.dbo.mtraba00' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="mtraba00">
+    <Key>
+      <PropertyRef Name="straba" />
+      <PropertyRef Name="dappat" />
+      <PropertyRef Name="dapmat" />
+      <PropertyRef Name="dnombr" />
+      <PropertyRef Name="csecci" />
+      <PropertyRef Name="careas" />
+      <PropertyRef Name="cempre" />
+      <PropertyRef Name="ctptra" />
+      <PropertyRef Name="xsecci" />
+      <PropertyRef Name="clnprd01" />
+    </Key>
+    <Property Name="ctraba" Type="char" MaxLength="6" />
+    <Property Name="dtraba" Type="varchar" MaxLength="30" />
+    <Property Name="ccargo" Type="char" MaxLength="2" />
+    <Property Name="dcargo" Type="varchar" MaxLength="25" />
+    <Property Name="straba" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="dappat" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="dapmat" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="dnombr" Type="char" MaxLength="20" Nullable="false" />
+    <Property Name="clinea" Type="char" MaxLength="2" />
+    <Property Name="csecci" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="careas" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="clocal" Type="char" MaxLength="2" />
+    <Property Name="cempre" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="ccncos" Type="char" MaxLength="5" />
+    <Property Name="ctptra" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ctppag" Type="char" MaxLength="1" />
+    <Property Name="nlbele" Type="char" MaxLength="20" />
+    <Property Name="fingre" Type="datetime" />
+    <Property Name="dsecci" Type="char" MaxLength="35" />
+    <Property Name="xsecci" Type="char" MaxLength="2" Nullable="false" />
+    <Property Name="finico" Type="datetime" />
+    <Property Name="ffinco" Type="datetime" />
+    <Property Name="fnacim" Type="datetime" />
+    <Property Name="fceses" Type="datetime" />
+    <Property Name="clnprd" Type="char" MaxLength="2" />
+    <Property Name="clnprd01" Type="char" MaxLength="2" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_pdefec01_paudit01">
+    <End Role="paudit01" Type="Self.paudit01" Multiplicity="1" />
+    <End Role="pdefec01" Type="Self.pdefec01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="paudit01">
+        <PropertyRef Name="careas" />
+        <PropertyRef Name="faudit" />
+        <PropertyRef Name="nsecue" />
+        <PropertyRef Name="clinea" />
+      </Principal>
+      <Dependent Role="pdefec01">
+        <PropertyRef Name="careas" />
+        <PropertyRef Name="faudit" />
+        <PropertyRef Name="nsecue" />
+        <PropertyRef Name="clinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="bdtexModelStoreContainer">
+    <EntitySet Name="mclien00" EntityType="Self.mclien00" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="padcor00" EntityType="Self.padcor00" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="paudit01" EntityType="Self.paudit01" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="paudob00" EntityType="Self.paudob00" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pcoxes00" EntityType="Self.pcoxes00" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pdefec01" EntityType="Self.pdefec01" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="pdgorp00" EntityType="Self.pdgorp00" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="mtraba_view00" EntityType="Self.mtraba_view00" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [mtraba_view00].[ctraba] AS [ctraba], 
+    [mtraba_view00].[dtraba] AS [dtraba], 
+    [mtraba_view00].[dcargo] AS [dcargo], 
+    [mtraba_view00].[straba] AS [straba], 
+    [mtraba_view00].[dsecci] AS [dsecci], 
+    [mtraba_view00].[xsecci] AS [xsecci], 
+    [mtraba_view00].[xlnprd] AS [xlnprd], 
+    [mtraba_view00].[nlbele] AS [nlbele]
+    FROM [dbo].[mtraba_view00] AS [mtraba_view00]</DefiningQuery>
+    </EntitySet>
+    <EntitySet Name="mtraba00" EntityType="Self.mtraba00" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [mtraba00].[ctraba] AS [ctraba], 
+    [mtraba00].[dtraba] AS [dtraba], 
+    [mtraba00].[ccargo] AS [ccargo], 
+    [mtraba00].[dcargo] AS [dcargo], 
+    [mtraba00].[straba] AS [straba], 
+    [mtraba00].[dappat] AS [dappat], 
+    [mtraba00].[dapmat] AS [dapmat], 
+    [mtraba00].[dnombr] AS [dnombr], 
+    [mtraba00].[clinea] AS [clinea], 
+    [mtraba00].[csecci] AS [csecci], 
+    [mtraba00].[careas] AS [careas], 
+    [mtraba00].[clocal] AS [clocal], 
+    [mtraba00].[cempre] AS [cempre], 
+    [mtraba00].[ccncos] AS [ccncos], 
+    [mtraba00].[ctptra] AS [ctptra], 
+    [mtraba00].[ctppag] AS [ctppag], 
+    [mtraba00].[nlbele] AS [nlbele], 
+    [mtraba00].[fingre] AS [fingre], 
+    [mtraba00].[dsecci] AS [dsecci], 
+    [mtraba00].[xsecci] AS [xsecci], 
+    [mtraba00].[finico] AS [finico], 
+    [mtraba00].[ffinco] AS [ffinco], 
+    [mtraba00].[fnacim] AS [fnacim], 
+    [mtraba00].[fceses] AS [fceses], 
+    [mtraba00].[clnprd] AS [clnprd], 
+    [mtraba00].[clnprd01] AS [clnprd01]
+    FROM [dbo].[mtraba00] AS [mtraba00]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_pdefec01_paudit01" Association="Self.FK_pdefec01_paudit01">
+      <End Role="paudit01" EntitySet="paudit01" />
+      <End Role="pdefec01" EntitySet="pdefec01" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="bdtexModelStoreContainer" CdmEntityContainer="bdtexEntities">
+    <EntitySetMapping Name="paudit01">
+      <EntityTypeMapping TypeName="bdtexModel.paudit01">
+        <MappingFragment StoreEntitySet="paudit01">
+          <ScalarProperty Name="sautab" ColumnName="sautab" />
+          <ScalarProperty Name="ndesap" ColumnName="ndesap" />
+          <ScalarProperty Name="sanula" ColumnName="sanula" />
+          <ScalarProperty Name="flgenv" ColumnName="flgenv" />
+          <ScalarProperty Name="csuppl" ColumnName="csuppl" />
+          <ScalarProperty Name="ctpaud" ColumnName="ctpaud" />
+          <ScalarProperty Name="drefpr" ColumnName="drefpr" />
+          <ScalarProperty Name="caudpr" ColumnName="caudpr" />
+          <ScalarProperty Name="fprogr" ColumnName="fprogr" />
+          <ScalarProperty Name="nordpo" ColumnName="nordpo" />
+          <ScalarProperty Name="fmodif" ColumnName="fmodif" />
+          <ScalarProperty Name="fcreac" ColumnName="fcreac" />
+          <ScalarProperty Name="cusuar" ColumnName="cusuar" />
+          <ScalarProperty Name="nseref" ColumnName="nseref" />
+          <ScalarProperty Name="fauref" ColumnName="fauref" />
+          <ScalarProperty Name="cliref" ColumnName="cliref" />
+          <ScalarProperty Name="flgext" ColumnName="flgext" />
+          <ScalarProperty Name="caudit" ColumnName="caudit" />
+          <ScalarProperty Name="nreaud" ColumnName="nreaud" />
+          <ScalarProperty Name="flgrau" ColumnName="flgrau" />
+          <ScalarProperty Name="dobser" ColumnName="dobser" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="ndefec" ColumnName="ndefec" />
+          <ScalarProperty Name="flgcie" ColumnName="flgcie" />
+          <ScalarProperty Name="porcen" ColumnName="porcen" />
+          <ScalarProperty Name="nsegun" ColumnName="nsegun" />
+          <ScalarProperty Name="nrecup" ColumnName="nrecup" />
+          <ScalarProperty Name="pcierr" ColumnName="pcierr" />
+          <ScalarProperty Name="nmuest" ColumnName="nmuest" />
+          <ScalarProperty Name="nlotes" ColumnName="nlotes" />
+          <ScalarProperty Name="npacki" ColumnName="npacki" />
+          <ScalarProperty Name="nordco" ColumnName="nordco" />
+          <ScalarProperty Name="cparti" ColumnName="cparti" />
+          <ScalarProperty Name="cturno" ColumnName="cturno" />
+          <ScalarProperty Name="cmaqui" ColumnName="cmaqui" />
+          <ScalarProperty Name="cprove" ColumnName="cprove" />
+          <ScalarProperty Name="copera" ColumnName="copera" />
+          <ScalarProperty Name="ctraba" ColumnName="ctraba" />
+          <ScalarProperty Name="dlotes" ColumnName="dlotes" />
+          <ScalarProperty Name="qtotal" ColumnName="qtotal" />
+          <ScalarProperty Name="dtalla" ColumnName="dtalla" />
+          <ScalarProperty Name="npanos" ColumnName="npanos" />
+          <ScalarProperty Name="ccolor" ColumnName="ccolor" />
+          <ScalarProperty Name="citems" ColumnName="citems" />
+          <ScalarProperty Name="cencog" ColumnName="cencog" />
+          <ScalarProperty Name="npieza" ColumnName="npieza" />
+          <ScalarProperty Name="ccarub" ColumnName="ccarub" />
+          <ScalarProperty Name="cmarbe" ColumnName="cmarbe" />
+          <ScalarProperty Name="nordct" ColumnName="nordct" />
+          <ScalarProperty Name="nordpr" ColumnName="nordpr" />
+          <ScalarProperty Name="ctpord" ColumnName="ctpord" />
+          <ScalarProperty Name="clinea" ColumnName="clinea" />
+          <ScalarProperty Name="nsecue" ColumnName="nsecue" />
+          <ScalarProperty Name="faudit" ColumnName="faudit" />
+          <ScalarProperty Name="careas" ColumnName="careas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtraba_view00">
+      <EntityTypeMapping TypeName="bdtexModel.mtraba_view00">
+        <MappingFragment StoreEntitySet="mtraba_view00">
+          <ScalarProperty Name="nlbele" ColumnName="nlbele" />
+          <ScalarProperty Name="xlnprd" ColumnName="xlnprd" />
+          <ScalarProperty Name="xsecci" ColumnName="xsecci" />
+          <ScalarProperty Name="dsecci" ColumnName="dsecci" />
+          <ScalarProperty Name="straba" ColumnName="straba" />
+          <ScalarProperty Name="dcargo" ColumnName="dcargo" />
+          <ScalarProperty Name="dtraba" ColumnName="dtraba" />
+          <ScalarProperty Name="ctraba" ColumnName="ctraba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mtraba00">
+      <EntityTypeMapping TypeName="bdtexModel.mtraba00">
+        <MappingFragment StoreEntitySet="mtraba00">
+          <ScalarProperty Name="clnprd01" ColumnName="clnprd01" />
+          <ScalarProperty Name="clnprd" ColumnName="clnprd" />
+          <ScalarProperty Name="fceses" ColumnName="fceses" />
+          <ScalarProperty Name="fnacim" ColumnName="fnacim" />
+          <ScalarProperty Name="ffinco" ColumnName="ffinco" />
+          <ScalarProperty Name="finico" ColumnName="finico" />
+          <ScalarProperty Name="xsecci" ColumnName="xsecci" />
+          <ScalarProperty Name="dsecci" ColumnName="dsecci" />
+          <ScalarProperty Name="fingre" ColumnName="fingre" />
+          <ScalarProperty Name="nlbele" ColumnName="nlbele" />
+          <ScalarProperty Name="ctppag" ColumnName="ctppag" />
+          <ScalarProperty Name="ctptra" ColumnName="ctptra" />
+          <ScalarProperty Name="ccncos" ColumnName="ccncos" />
+          <ScalarProperty Name="cempre" ColumnName="cempre" />
+          <ScalarProperty Name="clocal" ColumnName="clocal" />
+          <ScalarProperty Name="careas" ColumnName="careas" />
+          <ScalarProperty Name="csecci" ColumnName="csecci" />
+          <ScalarProperty Name="clinea" ColumnName="clinea" />
+          <ScalarProperty Name="dnombr" ColumnName="dnombr" />
+          <ScalarProperty Name="dapmat" ColumnName="dapmat" />
+          <ScalarProperty Name="dappat" ColumnName="dappat" />
+          <ScalarProperty Name="straba" ColumnName="straba" />
+          <ScalarProperty Name="dcargo" ColumnName="dcargo" />
+          <ScalarProperty Name="ccargo" ColumnName="ccargo" />
+          <ScalarProperty Name="dtraba" ColumnName="dtraba" />
+          <ScalarProperty Name="ctraba" ColumnName="ctraba" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mclien00">
+      <EntityTypeMapping TypeName="bdtexModel.mclien00">
+        <MappingFragment StoreEntitySet="mclien00">
+          <ScalarProperty Name="cejcta" ColumnName="cejcta" />
+          <ScalarProperty Name="nivaql" ColumnName="nivaql" />
+          <ScalarProperty Name="flgsau" ColumnName="flgsau" />
+          <ScalarProperty Name="drzabr" ColumnName="drzabr" />
+          <ScalarProperty Name="cagin2" ColumnName="cagin2" />
+          <ScalarProperty Name="cagin1" ColumnName="cagin1" />
+          <ScalarProperty Name="dabrev" ColumnName="dabrev" />
+          <ScalarProperty Name="pmamin" ColumnName="pmamin" />
+          <ScalarProperty Name="socuse2" ColumnName="socuse2" />
+          <ScalarProperty Name="socuse" ColumnName="socuse" />
+          <ScalarProperty Name="scosse" ColumnName="scosse" />
+          <ScalarProperty Name="cclmas" ColumnName="cclmas" />
+          <ScalarProperty Name="stesti" ColumnName="stesti" />
+          <ScalarProperty Name="crespo" ColumnName="crespo" />
+          <ScalarProperty Name="strade" ColumnName="strade" />
+          <ScalarProperty Name="qadici" ColumnName="qadici" />
+          <ScalarProperty Name="padici" ColumnName="padici" />
+          <ScalarProperty Name="fvigen" ColumnName="fvigen" />
+          <ScalarProperty Name="svigen" ColumnName="svigen" />
+          <ScalarProperty Name="cusuar" ColumnName="cusuar" />
+          <ScalarProperty Name="ctpclo" ColumnName="ctpclo" />
+          <ScalarProperty Name="sclien" ColumnName="sclien" />
+          <ScalarProperty Name="setiqu" ColumnName="setiqu" />
+          <ScalarProperty Name="spoedi" ColumnName="spoedi" />
+          <ScalarProperty Name="ndiasa" ColumnName="ndiasa" />
+          <ScalarProperty Name="ddiren" ColumnName="ddiren" />
+          <ScalarProperty Name="dserie" ColumnName="dserie" />
+          <ScalarProperty Name="cfmtpa" ColumnName="cfmtpa" />
+          <ScalarProperty Name="ctpcli" ColumnName="ctpcli" />
+          <ScalarProperty Name="drefer02" ColumnName="drefer02" />
+          <ScalarProperty Name="drefer01" ColumnName="drefer01" />
+          <ScalarProperty Name="numfax" ColumnName="numfax" />
+          <ScalarProperty Name="ntfcli02" ColumnName="ntfcli02" />
+          <ScalarProperty Name="ntfcli01" ColumnName="ntfcli01" />
+          <ScalarProperty Name="ddirec" ColumnName="ddirec" />
+          <ScalarProperty Name="cznpos" ColumnName="cznpos" />
+          <ScalarProperty Name="cciuda" ColumnName="cciuda" />
+          <ScalarProperty Name="cpaise" ColumnName="cpaise" />
+          <ScalarProperty Name="creguc" ColumnName="creguc" />
+          <ScalarProperty Name="ndcide" ColumnName="ndcide" />
+          <ScalarProperty Name="cdcide" ColumnName="cdcide" />
+          <ScalarProperty Name="cagent" ColumnName="cagent" />
+          <ScalarProperty Name="dnombr" ColumnName="dnombr" />
+          <ScalarProperty Name="dapmat" ColumnName="dapmat" />
+          <ScalarProperty Name="dappat" ColumnName="dappat" />
+          <ScalarProperty Name="drzsoc" ColumnName="drzsoc" />
+          <ScalarProperty Name="cclien" ColumnName="cclien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="padcor00">
+      <EntityTypeMapping TypeName="bdtexModel.padcor00">
+        <MappingFragment StoreEntitySet="padcor00">
+          <ScalarProperty Name="flgsby" ColumnName="flgsby" />
+          <ScalarProperty Name="fchpco" ColumnName="fchpco" />
+          <ScalarProperty Name="scorad" ColumnName="scorad" />
+          <ScalarProperty Name="ntizad" ColumnName="ntizad" />
+          <ScalarProperty Name="savcom" ColumnName="savcom" />
+          <ScalarProperty Name="sulcor" ColumnName="sulcor" />
+          <ScalarProperty Name="cprser" ColumnName="cprser" />
+          <ScalarProperty Name="dobref" ColumnName="dobref" />
+          <ScalarProperty Name="qingug" ColumnName="qingug" />
+          <ScalarProperty Name="ndocum" ColumnName="ndocum" />
+          <ScalarProperty Name="ctporc" ColumnName="ctporc" />
+          <ScalarProperty Name="fguref" ColumnName="fguref" />
+          <ScalarProperty Name="ndcref" ColumnName="ndcref" />
+          <ScalarProperty Name="sanula" ColumnName="sanula" />
+          <ScalarProperty Name="sfinal" ColumnName="sfinal" />
+          <ScalarProperty Name="qdepur" ColumnName="qdepur" />
+          <ScalarProperty Name="fcalid" ColumnName="fcalid" />
+          <ScalarProperty Name="scalid" ColumnName="scalid" />
+          <ScalarProperty Name="savcor" ColumnName="savcor" />
+          <ScalarProperty Name="qmixha" ColumnName="qmixha" />
+          <ScalarProperty Name="qmixcl" ColumnName="qmixcl" />
+          <ScalarProperty Name="qmixco" ColumnName="qmixco" />
+          <ScalarProperty Name="qmixte" ColumnName="qmixte" />
+          <ScalarProperty Name="nordco" ColumnName="nordco" />
+          <ScalarProperty Name="stizad" ColumnName="stizad" />
+          <ScalarProperty Name="nmodul" ColumnName="nmodul" />
+          <ScalarProperty Name="nperim" ColumnName="nperim" />
+          <ScalarProperty Name="clnpre" ColumnName="clnpre" />
+          <ScalarProperty Name="fmddeh" ColumnName="fmddeh" />
+          <ScalarProperty Name="fmddes" ColumnName="fmddes" />
+          <ScalarProperty Name="qdesmu" ColumnName="qdesmu" />
+          <ScalarProperty Name="qdesco" ColumnName="qdesco" />
+          <ScalarProperty Name="qhabil" ColumnName="qhabil" />
+          <ScalarProperty Name="qcorte" ColumnName="qcorte" />
+          <ScalarProperty Name="qgirad" ColumnName="qgirad" />
+          <ScalarProperty Name="savios" ColumnName="savios" />
+          <ScalarProperty Name="dobshb" ColumnName="dobshb" />
+          <ScalarProperty Name="dobspl" ColumnName="dobspl" />
+          <ScalarProperty Name="dobsav" ColumnName="dobsav" />
+          <ScalarProperty Name="clnprd" ColumnName="clnprd" />
+          <ScalarProperty Name="fprmof" ColumnName="fprmof" />
+          <ScalarProperty Name="fprmod" ColumnName="fprmod" />
+          <ScalarProperty Name="frepro" ColumnName="frepro" />
+          <ScalarProperty Name="fprogr" ColumnName="fprogr" />
+          <ScalarProperty Name="sservi" ColumnName="sservi" />
+          <ScalarProperty Name="nmesas" ColumnName="nmesas" />
+          <ScalarProperty Name="cencog" ColumnName="cencog" />
+          <ScalarProperty Name="qretiz" ColumnName="qretiz" />
+          <ScalarProperty Name="qantiz" ColumnName="qantiz" />
+          <ScalarProperty Name="qlatiz" ColumnName="qlatiz" />
+          <ScalarProperty Name="qpropo12" ColumnName="qpropo12" />
+          <ScalarProperty Name="qpropo11" ColumnName="qpropo11" />
+          <ScalarProperty Name="qpropo10" ColumnName="qpropo10" />
+          <ScalarProperty Name="qpropo09" ColumnName="qpropo09" />
+          <ScalarProperty Name="qpropo08" ColumnName="qpropo08" />
+          <ScalarProperty Name="qpropo07" ColumnName="qpropo07" />
+          <ScalarProperty Name="qpropo06" ColumnName="qpropo06" />
+          <ScalarProperty Name="qpropo05" ColumnName="qpropo05" />
+          <ScalarProperty Name="qpropo04" ColumnName="qpropo04" />
+          <ScalarProperty Name="qpropo03" ColumnName="qpropo03" />
+          <ScalarProperty Name="qpropo02" ColumnName="qpropo02" />
+          <ScalarProperty Name="qpropo01" ColumnName="qpropo01" />
+          <ScalarProperty Name="ccarub" ColumnName="ccarub" />
+          <ScalarProperty Name="nordct" ColumnName="nordct" />
+          <ScalarProperty Name="nordpr" ColumnName="nordpr" />
+          <ScalarProperty Name="ctpord" ColumnName="ctpord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pcoxes00">
+      <EntityTypeMapping TypeName="bdtexModel.pcoxes00">
+        <MappingFragment StoreEntitySet="pcoxes00">
+          <ScalarProperty Name="fftenh" ColumnName="fftenh" />
+          <ScalarProperty Name="fitenh" ColumnName="fitenh" />
+          <ScalarProperty Name="fffabw" ColumnName="fffabw" />
+          <ScalarProperty Name="fifabw" ColumnName="fifabw" />
+          <ScalarProperty Name="sprdsm" ColumnName="sprdsm" />
+          <ScalarProperty Name="cprepa" ColumnName="cprepa" />
+          <ScalarProperty Name="qleadt" ColumnName="qleadt" />
+          <ScalarProperty Name="ffraca" ColumnName="ffraca" />
+          <ScalarProperty Name="ffrprc" ColumnName="ffrprc" />
+          <ScalarProperty Name="firprc" ColumnName="firprc" />
+          <ScalarProperty Name="faprmu" ColumnName="faprmu" />
+          <ScalarProperty Name="ffehit" ColumnName="ffehit" />
+          <ScalarProperty Name="fiehit" ColumnName="fiehit" />
+          <ScalarProperty Name="fingtd" ColumnName="fingtd" />
+          <ScalarProperty Name="fingru" ColumnName="fingru" />
+          <ScalarProperty Name="ffepra" ColumnName="ffepra" />
+          <ScalarProperty Name="fiepra" ColumnName="fiepra" />
+          <ScalarProperty Name="ffrcos" ColumnName="ffrcos" />
+          <ScalarProperty Name="fflavt" ColumnName="fflavt" />
+          <ScalarProperty Name="filavt" ColumnName="filavt" />
+          <ScalarProperty Name="cservi" ColumnName="cservi" />
+          <ScalarProperty Name="dcaruj" ColumnName="dcaruj" />
+          <ScalarProperty Name="cestij" ColumnName="cestij" />
+          <ScalarProperty Name="dhespe" ColumnName="dhespe" />
+          <ScalarProperty Name="chespe" ColumnName="chespe" />
+          <ScalarProperty Name="citems" ColumnName="citems" />
+          <ScalarProperty Name="qencaj" ColumnName="qencaj" />
+          <ScalarProperty Name="qingac" ColumnName="qingac" />
+          <ScalarProperty Name="qsm1se" ColumnName="qsm1se" />
+          <ScalarProperty Name="qsm1pf" ColumnName="qsm1pf" />
+          <ScalarProperty Name="qcosse" ColumnName="qcosse" />
+          <ScalarProperty Name="qcospf" ColumnName="qcospf" />
+          <ScalarProperty Name="qdesse" ColumnName="qdesse" />
+          <ScalarProperty Name="qdespf" ColumnName="qdespf" />
+          <ScalarProperty Name="qhabil" ColumnName="qhabil" />
+          <ScalarProperty Name="qcorte" ColumnName="qcorte" />
+          <ScalarProperty Name="qgirad" ColumnName="qgirad" />
+          <ScalarProperty Name="qitems" ColumnName="qitems" />
+          <ScalarProperty Name="qitere" ColumnName="qitere" />
+          <ScalarProperty Name="ddesti" ColumnName="ddesti" />
+          <ScalarProperty Name="dtpemb" ColumnName="dtpemb" />
+          <ScalarProperty Name="nordcs" ColumnName="nordcs" />
+          <ScalarProperty Name="ndespa" ColumnName="ndespa" />
+          <ScalarProperty Name="ffemop" ColumnName="ffemop" />
+          <ScalarProperty Name="fiemop" ColumnName="fiemop" />
+          <ScalarProperty Name="ffdeco" ColumnName="ffdeco" />
+          <ScalarProperty Name="fideco" ColumnName="fideco" />
+          <ScalarProperty Name="ffcohi" ColumnName="ffcohi" />
+          <ScalarProperty Name="ficohi" ColumnName="ficohi" />
+          <ScalarProperty Name="ffprad" ColumnName="ffprad" />
+          <ScalarProperty Name="fiprad" ColumnName="fiprad" />
+          <ScalarProperty Name="ffacab" ColumnName="ffacab" />
+          <ScalarProperty Name="fiacab" ColumnName="fiacab" />
+          <ScalarProperty Name="dlnprd" ColumnName="dlnprd" />
+          <ScalarProperty Name="faprot" ColumnName="faprot" />
+          <ScalarProperty Name="falabd" ColumnName="falabd" />
+          <ScalarProperty Name="ffingh" ColumnName="ffingh" />
+          <ScalarProperty Name="fiingh" ColumnName="fiingh" />
+          <ScalarProperty Name="ffdesh" ColumnName="ffdesh" />
+          <ScalarProperty Name="fidesh" ColumnName="fidesh" />
+          <ScalarProperty Name="ffintj" ColumnName="ffintj" />
+          <ScalarProperty Name="fiintj" ColumnName="fiintj" />
+          <ScalarProperty Name="ffdefr" ColumnName="ffdefr" />
+          <ScalarProperty Name="fidefr" ColumnName="fidefr" />
+          <ScalarProperty Name="fftert" ColumnName="fftert" />
+          <ScalarProperty Name="fitert" ColumnName="fitert" />
+          <ScalarProperty Name="fftent" ColumnName="fftent" />
+          <ScalarProperty Name="fitent" ColumnName="fitent" />
+          <ScalarProperty Name="ffacat" ColumnName="ffacat" />
+          <ScalarProperty Name="fiacat" ColumnName="fiacat" />
+          <ScalarProperty Name="facr" ColumnName="facr" />
+          <ScalarProperty Name="ffingt" ColumnName="ffingt" />
+          <ScalarProperty Name="fiingt" ColumnName="fiingt" />
+          <ScalarProperty Name="ffrevt" ColumnName="ffrevt" />
+          <ScalarProperty Name="firevt" ColumnName="firevt" />
+          <ScalarProperty Name="ffcort" ColumnName="ffcort" />
+          <ScalarProperty Name="ficort" ColumnName="ficort" />
+          <ScalarProperty Name="ffepco" ColumnName="ffepco" />
+          <ScalarProperty Name="fiepco" ColumnName="fiepco" />
+          <ScalarProperty Name="ffhabi" ColumnName="ffhabi" />
+          <ScalarProperty Name="fihabi" ColumnName="fihabi" />
+          <ScalarProperty Name="ffdcos" ColumnName="ffdcos" />
+          <ScalarProperty Name="fidcos" ColumnName="fidcos" />
+          <ScalarProperty Name="ffsco1" ColumnName="ffsco1" />
+          <ScalarProperty Name="fisco1" ColumnName="fisco1" />
+          <ScalarProperty Name="ffscos" ColumnName="ffscos" />
+          <ScalarProperty Name="fiscos" ColumnName="fiscos" />
+          <ScalarProperty Name="ffscoh" ColumnName="ffscoh" />
+          <ScalarProperty Name="fiscoh" ColumnName="fiscoh" />
+          <ScalarProperty Name="cescli" ColumnName="cescli" />
+          <ScalarProperty Name="ccodcl" ColumnName="ccodcl" />
+          <ScalarProperty Name="ccolor" ColumnName="ccolor" />
+          <ScalarProperty Name="ngrupo" ColumnName="ngrupo" />
+          <ScalarProperty Name="dcarub" ColumnName="dcarub" />
+          <ScalarProperty Name="ccarub" ColumnName="ccarub" />
+          <ScalarProperty Name="cestil" ColumnName="cestil" />
+          <ScalarProperty Name="nordpr" ColumnName="nordpr" />
+          <ScalarProperty Name="ctpord" ColumnName="ctpord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pdgorp00">
+      <EntityTypeMapping TypeName="bdtexModel.pdgorp00">
+        <MappingFragment StoreEntitySet="pdgorp00">
+          <ScalarProperty Name="flqaca" ColumnName="flqaca" />
+          <ScalarProperty Name="stidis" ColumnName="stidis" />
+          <ScalarProperty Name="smodpr" ColumnName="smodpr" />
+          <ScalarProperty Name="dconte" ColumnName="dconte" />
+          <ScalarProperty Name="slogis" ColumnName="slogis" />
+          <ScalarProperty Name="slista" ColumnName="slista" />
+          <ScalarProperty Name="ffrbor" ColumnName="ffrbor" />
+          <ScalarProperty Name="nhojas" ColumnName="nhojas" />
+          <ScalarProperty Name="iprhil" ColumnName="iprhil" />
+          <ScalarProperty Name="scotiz" ColumnName="scotiz" />
+          <ScalarProperty Name="fumliq" ColumnName="fumliq" />
+          <ScalarProperty Name="ssaldo" ColumnName="ssaldo" />
+          <ScalarProperty Name="dobsso" ColumnName="dobsso" />
+          <ScalarProperty Name="splane" ColumnName="splane" />
+          <ScalarProperty Name="fliqui" ColumnName="fliqui" />
+          <ScalarProperty Name="srutmp" ColumnName="srutmp" />
+          <ScalarProperty Name="fconsu" ColumnName="fconsu" />
+          <ScalarProperty Name="fdispo" ColumnName="fdispo" />
+          <ScalarProperty Name="pplane" ColumnName="pplane" />
+          <ScalarProperty Name="srevis" ColumnName="srevis" />
+          <ScalarProperty Name="squali" ColumnName="squali" />
+          <ScalarProperty Name="scpsia" ColumnName="scpsia" />
+          <ScalarProperty Name="cgrtal" ColumnName="cgrtal" />
+          <ScalarProperty Name="pmerma" ColumnName="pmerma" />
+          <ScalarProperty Name="ifleop" ColumnName="ifleop" />
+          <ScalarProperty Name="dobsfl" ColumnName="dobsfl" />
+          <ScalarProperty Name="speddm" ColumnName="speddm" />
+          <ScalarProperty Name="dobcrt" ColumnName="dobcrt" />
+          <ScalarProperty Name="iprsda" ColumnName="iprsda" />
+          <ScalarProperty Name="dobsct" ColumnName="dobsct" />
+          <ScalarProperty Name="fulmod" ColumnName="fulmod" />
+          <ScalarProperty Name="cusuar" ColumnName="cusuar" />
+          <ScalarProperty Name="sordpr" ColumnName="sordpr" />
+          <ScalarProperty Name="slqxop" ColumnName="slqxop" />
+          <ScalarProperty Name="ffraca" ColumnName="ffraca" />
+          <ScalarProperty Name="ffrcos" ColumnName="ffrcos" />
+          <ScalarProperty Name="sexpor" ColumnName="sexpor" />
+          <ScalarProperty Name="ctipre" ColumnName="ctipre" />
+          <ScalarProperty Name="cdivge" ColumnName="cdivge" />
+          <ScalarProperty Name="qtotal" ColumnName="qtotal" />
+          <ScalarProperty Name="padici" ColumnName="padici" />
+          <ScalarProperty Name="cdivis" ColumnName="cdivis" />
+          <ScalarProperty Name="ctempo" ColumnName="ctempo" />
+          <ScalarProperty Name="sprxco" ColumnName="sprxco" />
+          <ScalarProperty Name="descli" ColumnName="descli" />
+          <ScalarProperty Name="cescli" ColumnName="cescli" />
+          <ScalarProperty Name="cpater" ColumnName="cpater" />
+          <ScalarProperty Name="ifctpr" ColumnName="ifctpr" />
+          <ScalarProperty Name="smguni" ColumnName="smguni" />
+          <ScalarProperty Name="smgcbr" ColumnName="smgcbr" />
+          <ScalarProperty Name="imguni" ColumnName="imguni" />
+          <ScalarProperty Name="imgcbr" ColumnName="imgcbr" />
+          <ScalarProperty Name="smgcon" ColumnName="smgcon" />
+          <ScalarProperty Name="imgcon" ColumnName="imgcon" />
+          <ScalarProperty Name="ipresc" ColumnName="ipresc" />
+          <ScalarProperty Name="iprepr" ColumnName="iprepr" />
+          <ScalarProperty Name="dobser" ColumnName="dobser" />
+          <ScalarProperty Name="nordco" ColumnName="nordco" />
+          <ScalarProperty Name="finipr" ColumnName="finipr" />
+          <ScalarProperty Name="fembor" ColumnName="fembor" />
+          <ScalarProperty Name="fembar" ColumnName="fembar" />
+          <ScalarProperty Name="nversi" ColumnName="nversi" />
+          <ScalarProperty Name="cestil" ColumnName="cestil" />
+          <ScalarProperty Name="cagent" ColumnName="cagent" />
+          <ScalarProperty Name="cclien" ColumnName="cclien" />
+          <ScalarProperty Name="femisi" ColumnName="femisi" />
+          <ScalarProperty Name="nordpr" ColumnName="nordpr" />
+          <ScalarProperty Name="ctpord" ColumnName="ctpord" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="pdefec01">
+      <EntityTypeMapping TypeName="bdtexModel.pdefec01">
+        <MappingFragment StoreEntitySet="pdefec01">
+          <ScalarProperty Name="imgdef" ColumnName="imgdef" />
+          <ScalarProperty Name="cardef" ColumnName="cardef" />
+          <ScalarProperty Name="cgrupo" ColumnName="cgrupo" />
+          <ScalarProperty Name="dobser" ColumnName="dobser" />
+          <ScalarProperty Name="qcanti" ColumnName="qcanti" />
+          <ScalarProperty Name="coddef" ColumnName="coddef" />
+          <ScalarProperty Name="codigo" ColumnName="codigo" />
+          <ScalarProperty Name="clinea" ColumnName="clinea" />
+          <ScalarProperty Name="nsecue" ColumnName="nsecue" />
+          <ScalarProperty Name="faudit" ColumnName="faudit" />
+          <ScalarProperty Name="careas" ColumnName="careas" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="paudob00">
+      <EntityTypeMapping TypeName="bdtexModel.paudob00">
+        <MappingFragment StoreEntitySet="paudob00">
+          <ScalarProperty Name="cusuar" ColumnName="cusuar" />
+          <ScalarProperty Name="dobser" ColumnName="dobser" />
+          <ScalarProperty Name="clinea" ColumnName="clinea" />
+          <ScalarProperty Name="fregis" ColumnName="fregis" />
+          <ScalarProperty Name="idobse" ColumnName="idobse" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

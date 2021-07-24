@@ -1,0 +1,51 @@
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.dll.config
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.pdb
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.SqlServer.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\System.Net.Http.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Algorithms.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Encoding.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Primitives.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.X509Certificates.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.xml
+D:\App PFashions\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.SqlServer.xml
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csprojAssemblyReference.cache
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csproj.CoreCompileInputs.cache
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csproj.CopyComplete
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.dll
+D:\App PFashions\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.pdb
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.dll.config
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.pdb
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\System.Net.Http.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Algorithms.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Encoding.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Primitives.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.X509Certificates.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.xml
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csprojAssemblyReference.cache
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csproj.CoreCompileInputs.cache
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csproj.CopyComplete
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.dll
+C:\Users\ricmij\Desktop\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.pdb
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.dll.config
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\DataAccessPF.pdb
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.SqlServer.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\System.Net.Http.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Algorithms.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Encoding.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.Primitives.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\System.Security.Cryptography.X509Certificates.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.xml
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\bin\Release\EntityFramework.SqlServer.xml
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csprojAssemblyReference.cache
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csproj.CoreCompileInputs.cache
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.csproj.CopyComplete
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.dll
+D:\Ricardo\Desarrollo\AppWebApiPF\DataAccessPF\obj\Release\DataAccessPF.pdb

@@ -1,0 +1,492 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="bdtexModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="bdtexEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="paudit01" EntityType="bdtexModel.paudit01" />
+    <EntitySet Name="mtraba_view00" EntityType="bdtexModel.mtraba_view00" />
+    <EntitySet Name="mtraba00" EntityType="bdtexModel.mtraba00" />
+    <EntitySet Name="mclien00" EntityType="bdtexModel.mclien00" />
+    <EntitySet Name="padcor00" EntityType="bdtexModel.padcor00" />
+    <EntitySet Name="pcoxes00" EntityType="bdtexModel.pcoxes00" />
+    <EntitySet Name="pdgorp00" EntityType="bdtexModel.pdgorp00" />
+    <EntitySet Name="pdefec01" EntityType="bdtexModel.pdefec01" />
+    <AssociationSet Name="FK_pdefec01_paudit01" Association="bdtexModel.FK_pdefec01_paudit01">
+      <End Role="paudit01" EntitySet="paudit01" />
+      <End Role="pdefec01" EntitySet="pdefec01" />
+    </AssociationSet>
+    <EntitySet Name="paudob00" EntityType="bdtexModel.paudob00" />
+  </EntityContainer>
+  <EntityType Name="paudit01">
+    <Key>
+      <PropertyRef Name="careas" />
+      <PropertyRef Name="faudit" />
+      <PropertyRef Name="nsecue" />
+      <PropertyRef Name="clinea" />
+    </Key>
+    <Property Name="careas" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="faudit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nsecue" Type="Int16" Nullable="false" />
+    <Property Name="clinea" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ctpord" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nordpr" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="nordct" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="cmarbe" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ccarub" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="npieza" Type="Int16" />
+    <Property Name="cencog" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="citems" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="ccolor" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="npanos" Type="Int32" />
+    <Property Name="dtalla" Type="String" MaxLength="25" FixedLength="true" Unicode="false" />
+    <Property Name="qtotal" Type="Int32" />
+    <Property Name="dlotes" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="ctraba" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="copera" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cprove" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cmaqui" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cturno" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cparti" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="nordco" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="npacki" Type="Byte" />
+    <Property Name="nlotes" Type="Int32" Nullable="false" />
+    <Property Name="nmuest" Type="Int32" Nullable="false" />
+    <Property Name="pcierr" Type="Int32" />
+    <Property Name="nrecup" Type="Int16" />
+    <Property Name="nsegun" Type="Int16" />
+    <Property Name="porcen" Type="Decimal" Precision="6" Scale="2" />
+    <Property Name="flgcie" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ndefec" Type="Int16" Nullable="false" />
+    <Property Name="status" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dobser" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="flgrau" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="nreaud" Type="Byte" />
+    <Property Name="caudit" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="flgext" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cliref" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="fauref" Type="DateTime" Precision="3" />
+    <Property Name="nseref" Type="Int16" />
+    <Property Name="cusuar" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fcreac" Type="DateTime" Precision="3" />
+    <Property Name="fmodif" Type="DateTime" Precision="3" />
+    <Property Name="nordpo" Type="Byte" />
+    <Property Name="fprogr" Type="DateTime" Precision="3" />
+    <Property Name="caudpr" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="drefpr" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ctpaud" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="csuppl" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="flgenv" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sanula" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ndesap" Type="Byte" />
+    <NavigationProperty Name="pdefec01" Relationship="bdtexModel.FK_pdefec01_paudit01" FromRole="paudit01" ToRole="pdefec01" />
+    <Property Name="sautab" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mtraba_view00">
+    <Key>
+      <PropertyRef Name="straba" />
+      <PropertyRef Name="xsecci" />
+    </Key>
+    <Property Name="ctraba" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="dtraba" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="dcargo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="straba" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dsecci" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Name="xsecci" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="xlnprd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nlbele" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mtraba00">
+    <Key>
+      <PropertyRef Name="straba" />
+      <PropertyRef Name="dappat" />
+      <PropertyRef Name="dapmat" />
+      <PropertyRef Name="dnombr" />
+      <PropertyRef Name="csecci" />
+      <PropertyRef Name="careas" />
+      <PropertyRef Name="cempre" />
+      <PropertyRef Name="ctptra" />
+      <PropertyRef Name="xsecci" />
+      <PropertyRef Name="clnprd01" />
+    </Key>
+    <Property Name="ctraba" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="dtraba" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="ccargo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="dcargo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+    <Property Name="straba" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dappat" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="dapmat" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="dnombr" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="clinea" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="csecci" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="careas" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="clocal" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cempre" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ccncos" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ctptra" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ctppag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="nlbele" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="fingre" Type="DateTime" Precision="3" />
+    <Property Name="dsecci" Type="String" MaxLength="35" FixedLength="true" Unicode="false" />
+    <Property Name="xsecci" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="finico" Type="DateTime" Precision="3" />
+    <Property Name="ffinco" Type="DateTime" Precision="3" />
+    <Property Name="fnacim" Type="DateTime" Precision="3" />
+    <Property Name="fceses" Type="DateTime" Precision="3" />
+    <Property Name="clnprd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="clnprd01" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mclien00">
+    <Key>
+      <PropertyRef Name="cclien" />
+    </Key>
+    <Property Name="cclien" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="drzsoc" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="dappat" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="dapmat" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="dnombr" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="cagent" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cdcide" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ndcide" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="creguc" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="cpaise" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cciuda" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cznpos" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+    <Property Name="ddirec" Type="String" Nullable="false" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="ntfcli01" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ntfcli02" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="numfax" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="drefer01" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="drefer02" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="ctpcli" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cfmtpa" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="dserie" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="ddiren" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ndiasa" Type="Byte" />
+    <Property Name="spoedi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="setiqu" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sclien" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ctpclo" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cusuar" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+    <Property Name="svigen" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fvigen" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="padici" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="qadici" Type="Int32" />
+    <Property Name="strade" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="crespo" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="stesti" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cclmas" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="scosse" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="socuse" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="socuse2" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="pmamin" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="dabrev" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="cagin1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cagin2" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="drzabr" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="flgsau" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="nivaql" Type="String" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="cejcta" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="padcor00">
+    <Key>
+      <PropertyRef Name="ctpord" />
+      <PropertyRef Name="nordpr" />
+      <PropertyRef Name="nordct" />
+    </Key>
+    <Property Name="ctpord" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nordpr" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="nordct" Type="String" Nullable="false" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="ccarub" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="qpropo01" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo02" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo03" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo04" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo05" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo06" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo07" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo08" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo09" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo10" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo11" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qpropo12" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="qlatiz" Type="Single" />
+    <Property Name="qantiz" Type="Single" />
+    <Property Name="qretiz" Type="Single" />
+    <Property Name="cencog" Type="String" MaxLength="6" FixedLength="false" Unicode="false" />
+    <Property Name="nmesas" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="sservi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fprogr" Type="DateTime" Precision="3" />
+    <Property Name="frepro" Type="DateTime" Precision="3" />
+    <Property Name="fprmod" Type="DateTime" Precision="3" />
+    <Property Name="fprmof" Type="DateTime" Precision="3" />
+    <Property Name="clnprd" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="dobsav" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="dobspl" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="dobshb" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="savios" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="qgirad" Type="Int32" />
+    <Property Name="qcorte" Type="Int32" />
+    <Property Name="qhabil" Type="Int32" />
+    <Property Name="qdesco" Type="Int32" />
+    <Property Name="qdesmu" Type="Int32" />
+    <Property Name="fmddes" Type="DateTime" Precision="3" />
+    <Property Name="fmddeh" Type="DateTime" Precision="3" />
+    <Property Name="clnpre" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+    <Property Name="nperim" Type="Int32" />
+    <Property Name="nmodul" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="stizad" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="nordco" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="qmixte" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="qmixco" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="qmixcl" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="qmixha" Type="Decimal" Precision="10" Scale="4" />
+    <Property Name="savcor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="scalid" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fcalid" Type="DateTime" Precision="3" />
+    <Property Name="qdepur" Type="Int32" />
+    <Property Name="sfinal" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sanula" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ndcref" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="fguref" Type="DateTime" Precision="3" />
+    <Property Name="ctporc" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ndocum" Type="String" MaxLength="7" FixedLength="true" Unicode="false" />
+    <Property Name="qingug" Type="Int32" />
+    <Property Name="dobref" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="cprser" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="sulcor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="savcom" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ntizad" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="scorad" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fchpco" Type="DateTime" Precision="3" />
+    <Property Name="flgsby" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="pcoxes00">
+    <Key>
+      <PropertyRef Name="ctpord" />
+      <PropertyRef Name="nordpr" />
+      <PropertyRef Name="cestil" />
+      <PropertyRef Name="ccarub" />
+    </Key>
+    <Property Name="ctpord" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nordpr" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cestil" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="ccarub" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="dcarub" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="ngrupo" Type="Byte" />
+    <Property Name="ccolor" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="ccodcl" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="cescli" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="fiscoh" Type="DateTime" Precision="3" />
+    <Property Name="ffscoh" Type="DateTime" Precision="3" />
+    <Property Name="fiscos" Type="DateTime" Precision="3" />
+    <Property Name="ffscos" Type="DateTime" Precision="3" />
+    <Property Name="fisco1" Type="DateTime" Precision="3" />
+    <Property Name="ffsco1" Type="DateTime" Precision="3" />
+    <Property Name="fidcos" Type="DateTime" Precision="3" />
+    <Property Name="ffdcos" Type="DateTime" Precision="3" />
+    <Property Name="fihabi" Type="DateTime" Precision="3" />
+    <Property Name="ffhabi" Type="DateTime" Precision="3" />
+    <Property Name="fiepco" Type="DateTime" Precision="3" />
+    <Property Name="ffepco" Type="DateTime" Precision="3" />
+    <Property Name="ficort" Type="DateTime" Precision="3" />
+    <Property Name="ffcort" Type="DateTime" Precision="3" />
+    <Property Name="firevt" Type="DateTime" Precision="3" />
+    <Property Name="ffrevt" Type="DateTime" Precision="3" />
+    <Property Name="fiingt" Type="DateTime" Precision="3" />
+    <Property Name="ffingt" Type="DateTime" Precision="3" />
+    <Property Name="facr" Type="DateTime" Precision="3" />
+    <Property Name="fiacat" Type="DateTime" Precision="3" />
+    <Property Name="ffacat" Type="DateTime" Precision="3" />
+    <Property Name="fitent" Type="DateTime" Precision="3" />
+    <Property Name="fftent" Type="DateTime" Precision="3" />
+    <Property Name="fitert" Type="DateTime" Precision="3" />
+    <Property Name="fftert" Type="DateTime" Precision="3" />
+    <Property Name="fidefr" Type="DateTime" Precision="3" />
+    <Property Name="ffdefr" Type="DateTime" Precision="3" />
+    <Property Name="fiintj" Type="DateTime" Precision="3" />
+    <Property Name="ffintj" Type="DateTime" Precision="3" />
+    <Property Name="fidesh" Type="DateTime" Precision="3" />
+    <Property Name="ffdesh" Type="DateTime" Precision="3" />
+    <Property Name="fiingh" Type="DateTime" Precision="3" />
+    <Property Name="ffingh" Type="DateTime" Precision="3" />
+    <Property Name="falabd" Type="DateTime" Precision="3" />
+    <Property Name="faprot" Type="DateTime" Precision="3" />
+    <Property Name="dlnprd" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+    <Property Name="fiacab" Type="DateTime" Precision="3" />
+    <Property Name="ffacab" Type="DateTime" Precision="3" />
+    <Property Name="fiprad" Type="DateTime" Precision="3" />
+    <Property Name="ffprad" Type="DateTime" Precision="3" />
+    <Property Name="ficohi" Type="DateTime" Precision="3" />
+    <Property Name="ffcohi" Type="DateTime" Precision="3" />
+    <Property Name="fideco" Type="DateTime" Precision="3" />
+    <Property Name="ffdeco" Type="DateTime" Precision="3" />
+    <Property Name="fiemop" Type="DateTime" Precision="3" />
+    <Property Name="ffemop" Type="DateTime" Precision="3" />
+    <Property Name="ndespa" Type="Byte" />
+    <Property Name="nordcs" Type="Byte" />
+    <Property Name="dtpemb" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="ddesti" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+    <Property Name="qitere" Type="Int32" />
+    <Property Name="qitems" Type="Int32" />
+    <Property Name="qgirad" Type="Int32" />
+    <Property Name="qcorte" Type="Int32" />
+    <Property Name="qhabil" Type="Int32" />
+    <Property Name="qdespf" Type="Int32" />
+    <Property Name="qdesse" Type="Int32" />
+    <Property Name="qcospf" Type="Int32" />
+    <Property Name="qcosse" Type="Int32" />
+    <Property Name="qsm1pf" Type="Int32" />
+    <Property Name="qsm1se" Type="Int32" />
+    <Property Name="qingac" Type="Int32" />
+    <Property Name="qencaj" Type="Int32" />
+    <Property Name="citems" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="chespe" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="dhespe" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="cestij" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+    <Property Name="dcaruj" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cservi" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="filavt" Type="DateTime" Precision="3" />
+    <Property Name="fflavt" Type="DateTime" Precision="3" />
+    <Property Name="ffrcos" Type="DateTime" Precision="3" />
+    <Property Name="fiepra" Type="DateTime" Precision="3" />
+    <Property Name="ffepra" Type="DateTime" Precision="3" />
+    <Property Name="fingru" Type="DateTime" Precision="3" />
+    <Property Name="fingtd" Type="DateTime" Precision="3" />
+    <Property Name="fiehit" Type="DateTime" Precision="3" />
+    <Property Name="ffehit" Type="DateTime" Precision="3" />
+    <Property Name="faprmu" Type="DateTime" Precision="3" />
+    <Property Name="firprc" Type="DateTime" Precision="3" />
+    <Property Name="ffrprc" Type="DateTime" Precision="3" />
+    <Property Name="ffraca" Type="DateTime" Precision="3" />
+    <Property Name="qleadt" Type="Int32" />
+    <Property Name="cprepa" Type="String" MaxLength="15" FixedLength="true" Unicode="false" />
+    <Property Name="sprdsm" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fifabw" Type="DateTime" Precision="3" />
+    <Property Name="fffabw" Type="DateTime" Precision="3" />
+    <Property Name="fitenh" Type="DateTime" Precision="3" />
+    <Property Name="fftenh" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="pdgorp00">
+    <Key>
+      <PropertyRef Name="nordpr" />
+    </Key>
+    <Property Name="ctpord" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="nordpr" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="femisi" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="cclien" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cagent" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="cestil" Type="String" Nullable="false" MaxLength="5" FixedLength="true" Unicode="false" />
+    <Property Name="nversi" Type="Byte" />
+    <Property Name="fembar" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="fembor" Type="DateTime" Precision="3" />
+    <Property Name="finipr" Type="DateTime" Precision="3" />
+    <Property Name="nordco" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="dobser" Type="String" MaxLength="200" FixedLength="true" Unicode="false" />
+    <Property Name="iprepr" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="ipresc" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+    <Property Name="imgcon" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="smgcon" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="imgcbr" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="imguni" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="smgcbr" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="smguni" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ifctpr" Type="Decimal" Precision="3" Scale="2" />
+    <Property Name="cpater" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+    <Property Name="cescli" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+    <Property Name="descli" Type="String" MaxLength="60" FixedLength="true" Unicode="false" />
+    <Property Name="sprxco" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ctempo" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="cdivis" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+    <Property Name="padici" Type="Decimal" Precision="7" Scale="2" />
+    <Property Name="qtotal" Type="Int32" />
+    <Property Name="cdivge" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="ctipre" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="sexpor" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="ffrcos" Type="DateTime" Precision="3" />
+    <Property Name="ffraca" Type="DateTime" Precision="3" />
+    <Property Name="slqxop" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="sordpr" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="cusuar" Type="String" Nullable="false" MaxLength="6" FixedLength="true" Unicode="false" />
+    <Property Name="fulmod" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="dobsct" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="iprsda" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="dobcrt" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="speddm" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dobsfl" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="ifleop" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="pmerma" Type="Decimal" Precision="8" Scale="2" />
+    <Property Name="cgrtal" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="scpsia" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="squali" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="srevis" Type="String" Nullable="false" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="pplane" Type="Decimal" Nullable="false" Precision="3" Scale="2" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="fdispo" Type="DateTime" Precision="3" />
+    <Property Name="fconsu" Type="DateTime" Precision="3" />
+    <Property Name="srutmp" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="fliqui" Type="DateTime" Precision="3" />
+    <Property Name="splane" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dobsso" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ssaldo" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="fumliq" Type="DateTime" Precision="3" />
+    <Property Name="scotiz" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="iprhil" Type="Decimal" Precision="18" Scale="4" />
+    <Property Name="nhojas" Type="Int32" />
+    <Property Name="ffrbor" Type="DateTime" Precision="3" />
+    <Property Name="slista" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="slogis" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="dconte" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="smodpr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="stidis" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+    <Property Name="flqaca" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="pdefec01">
+    <Key>
+      <PropertyRef Name="careas" />
+      <PropertyRef Name="faudit" />
+      <PropertyRef Name="nsecue" />
+      <PropertyRef Name="clinea" />
+      <PropertyRef Name="codigo" />
+      <PropertyRef Name="coddef" />
+      <PropertyRef Name="cgrupo" />
+      <PropertyRef Name="cardef" />
+    </Key>
+    <Property Name="careas" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="faudit" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="nsecue" Type="Int16" Nullable="false" />
+    <Property Name="clinea" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="codigo" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="coddef" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="qcanti" Type="Int16" Nullable="false" />
+    <Property Name="dobser" Type="String" MaxLength="80" FixedLength="true" Unicode="false" />
+    <Property Name="cgrupo" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="cardef" Type="String" Nullable="false" MaxLength="2" FixedLength="true" Unicode="false" />
+    <NavigationProperty Name="paudit01" Relationship="bdtexModel.FK_pdefec01_paudit01" FromRole="pdefec01" ToRole="paudit01" />
+    <Property Name="imgdef" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <Association Name="FK_pdefec01_paudit01">
+    <End Type="bdtexModel.paudit01" Role="paudit01" Multiplicity="1" />
+    <End Type="bdtexModel.pdefec01" Role="pdefec01" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="paudit01">
+        <PropertyRef Name="careas" />
+        <PropertyRef Name="faudit" />
+        <PropertyRef Name="nsecue" />
+        <PropertyRef Name="clinea" />
+      </Principal>
+      <Dependent Role="pdefec01">
+        <PropertyRef Name="careas" />
+        <PropertyRef Name="faudit" />
+        <PropertyRef Name="nsecue" />
+        <PropertyRef Name="clinea" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="paudob00">
+    <Key>
+      <PropertyRef Name="idobse" />
+    </Key>
+    <Property Name="idobse" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="fregis" Type="DateTime" Precision="3" />
+    <Property Name="clinea" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+    <Property Name="dobser" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="cusuar" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+  </EntityType>
+</Schema>
